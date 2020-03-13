@@ -8,6 +8,10 @@ import NavBar from './components/NavBar';
 import AuthenticationSignUpView from './Views/Authentication/SignUp';
 import AuthenticationSignInView from './Views/Authentication/SignIn';
 import AboutUs from './Views/AboutUs';
+import CarrouselView from './Views/Carrousel';
+import MostPopularServicesView from './Views/MostPopularService';
+import MoreServicesWeOfferView from './Views/MoreServicesWeOffer';
+import SubscribeToOurPackagesView from './Views/SubscribeToOurPackages';
 
 class App extends Component {
   constructor() {
@@ -21,7 +25,11 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <NavBar />
+          <CarrouselView />
           <AboutUs />
+          <MostPopularServicesView />
+          <MoreServicesWeOfferView />
+          <SubscribeToOurPackagesView />
           <Switch>
             <Route path="/sign-up" redirect={'/'}>
               {' '}

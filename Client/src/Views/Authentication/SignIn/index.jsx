@@ -11,7 +11,7 @@ class AuthenticationSignInView extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
-  }
+  }             
 
   async handleFormSubmission(event) {
     event.preventDefault();

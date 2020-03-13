@@ -1,0 +1,31 @@
+/* * { //Removes the 40 padding prednfined in ul
+  margin: 0;
+  padding: 0;
+}
+ */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  text-align: start;
+}
+
+.MoreServicesWeOffer-Title {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.MoreServicesWeOffer-Text {
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+.moreserviceoffer {
+  display: flex;
+}
