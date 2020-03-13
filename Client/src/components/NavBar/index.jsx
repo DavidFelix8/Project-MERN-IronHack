@@ -7,7 +7,7 @@ class NavBar extends Component {
     return (
       <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand href="/home">Nome da APP</Navbar.Brand>
+          <Navbar.Brand href="/">Nome da APP</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
@@ -16,8 +16,8 @@ class NavBar extends Component {
               <Nav.Link href="/private">My Account</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="/SignUp">Log In</Nav.Link>
-              <Nav.Link href="/SignIn">Sign Up</Nav.Link>
+              <Nav.Link href="/sign-up">Log In</Nav.Link>
+              <Nav.Link href="/sign-in">Sign Up</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
