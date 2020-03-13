@@ -8,6 +8,10 @@ const schema = new mongoose.Schema({
     trim: true,
     required: true
   },
+  subtopic: {
+    type: Array,
+    required: true  
+  },
   image: {
     type: String,
     trim: true

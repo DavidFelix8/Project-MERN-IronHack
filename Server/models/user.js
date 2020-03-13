@@ -21,8 +21,11 @@ const schema = new mongoose.Schema({
     // required: true  To add google maps later if we can otherwise just a form with location
   },
   subscription: {
-    type: String,
-    enum: ['1', '2', '3']
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Subscription'
+  },
+  charged: {
+    type: boolean
   }
 });
 

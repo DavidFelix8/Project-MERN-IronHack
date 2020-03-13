@@ -3,9 +3,9 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+  name: {
+    type: String,
+    enum: ['basic', 'medium', 'full']
   },
   services: [
     {
@@ -13,9 +13,6 @@ const schema = new mongoose.Schema({
       ref: 'Service'
     }
   ],
-  charged: {
-    type: Boolean
-  },
   price: {
     amount: {
       type: Number,

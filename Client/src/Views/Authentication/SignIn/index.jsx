@@ -1,5 +1,5 @@
-/* import React, { Component } from 'react';
-import { signIn } from './../../../../services/authentication';
+import React, { Component } from 'react';
+import { signIn } from './../../../services/authentication';
 
 class AuthenticationSignInView extends Component {
   constructor(props) {
@@ -65,4 +65,3 @@ class AuthenticationSignInView extends Component {
 }
 
 export default AuthenticationSignInView;
- */
