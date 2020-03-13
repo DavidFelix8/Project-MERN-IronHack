@@ -15,6 +15,14 @@ const schema = new mongoose.Schema({
   },
   passwordHash: {
     type: String
+  },
+  location: {
+    type: string
+    // required: true  To add google maps later if we can otherwise just a form with location
+  },
+  subscription: {
+    type: String,
+    enum: ['1', '2', '3']
   }
 });
 
