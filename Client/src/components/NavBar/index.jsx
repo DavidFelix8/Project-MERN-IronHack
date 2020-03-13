@@ -16,8 +16,8 @@ class NavBar extends Component {
               <Nav.Link href="/private">My Account</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="/sign-up">Log In</Nav.Link>
-              <Nav.Link href="/sign-in">Sign Up</Nav.Link>
+              <Nav.Link href="/sign-in">Log In</Nav.Link>
+              <Nav.Link href="/sign-up">Sign Up</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
