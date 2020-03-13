@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 
 import AuthenticationSignUpView from './Views/Authentication/SignUp';
 import AuthenticationSignInView from './Views/Authentication/SignIn';
+import AboutUs from './Views/AboutUs';
 
 class App extends Component {
   constructor() {
@@ -20,6 +21,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <NavBar />
+          <AboutUs />
           <Switch>
             <Route path="/sign-up" redirect={'/'}>
               {' '}

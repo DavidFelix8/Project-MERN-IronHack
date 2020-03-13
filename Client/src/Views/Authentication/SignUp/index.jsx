@@ -40,7 +40,7 @@ class AuthenticationSignUpView extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleFormSubmission}>
+        <form onSubmit={this.handleFormSubmission} className="d-flex flex-column">
           <label htmlFor="name">Name</label>
           <input
             id="name"
