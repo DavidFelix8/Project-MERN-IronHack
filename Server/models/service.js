@@ -10,7 +10,7 @@ const schema = new mongoose.Schema({
   },
   subtopic: {
     type: Array,
-    required: true  
+    required: true
   },
   image: {
     type: String,
