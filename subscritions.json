@@ -1,0 +1,38 @@
+{
+  "subscription": [
+    {
+      "_id": "abcsdada",
+      "title": "base",
+      "categories": ["home_maintenance", "cleaning", "home_appliance_repairs"],
+      "price": { "amount": 15000, "currency": "EUR" }
+    },
+    {
+      "_id": "abcsdada",
+      "title": "premium",
+      "categories": [
+        "health_and_fitness",
+        "cleaning",
+        "electronic_repair",
+        "home_maintenance",
+        "home_appliance_repairs"
+      ],
+      "price": { "amount": 20000, "currency": "EUR" }
+    },
+    {
+      "_id": "abcsdagfsdfda",
+      "title": "star",
+      "categories": [
+        "cleaning",
+        "health_and_fitness",
+        "electronic_repair",
+        "laundry",
+        "home_maintenance",
+        "home_appliance_repairs",
+        "business",
+        "events_and_parties",
+        "delivery"
+      ],
+      "price": { "amount": 40000, "currency": "EUR" }
+    }
+  ]
+}
