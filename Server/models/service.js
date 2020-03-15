@@ -8,7 +8,7 @@ const schema = new mongoose.Schema({
     trim: true,
     required: true
   },
-  subtopic: {
+  category: {
     type: Array,
     required: true
   },

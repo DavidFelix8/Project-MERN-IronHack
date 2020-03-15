@@ -1,0 +1,33 @@
+.SubscribeToOurPackages-Section {
+  min-height: 20vh;
+}
+
+/* .SubscribeToOurPackages-link {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  background-color: rgb(163, 104, 104);
+  border-radius: ;
+  width: 55%;
+  margin: 3rem auto;
+}
+ */
+
+.SubscribeToOurPackages-link {
+  color: #fff !important;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 1rem;
+  border-radius: 3rem;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  margin: 2.5rem auto;
+}
+
+.SubscribeToOurPackages-link:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0s ease 0s;
+}
