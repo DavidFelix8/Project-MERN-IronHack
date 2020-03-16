@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProductItem from './../../components/ProductItem';
 import './style.scss';
 
 class PackageListView extends Component {
@@ -15,7 +14,11 @@ class PackageListView extends Component {
   fetchData() {}
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <h2>dskandsa</h2>
+      </div>
+    );
   }
 }
 
