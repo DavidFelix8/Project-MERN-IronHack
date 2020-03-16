@@ -10,6 +10,7 @@ import AuthenticationSignUpView from './Views/Authentication/SignUp';
 import AuthenticationSignInView from './Views/Authentication/SignIn';
 import HomeComponent from './components/Home';
 import SubscriptionListView from './Views/SubscriptionList';
+import ServiceListView from './Views/ServiceList';
 import ErrorView from './Views/Error';
 
 class App extends Component {
@@ -38,10 +39,10 @@ class App extends Component {
               redirect={'/'}
               render={props => <AuthenticationSignInView {...props} />}
             />
-
             {/*  <Route path="/error" component={ErrorView} />
             <Redirect to="/error" /> */}
             <SubscriptionListView />
+            <ServiceListView />
           </Switch>
         </BrowserRouter>
       </div>

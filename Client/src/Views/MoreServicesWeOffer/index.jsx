@@ -96,7 +96,7 @@ class MoreServicesWeOfferView extends Component {
           </article>
         </div>
 
-        <a href="">View all Categories</a>
+        <a href="/services">View all Categories</a>
       </section>
     );
   }
