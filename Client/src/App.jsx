@@ -26,6 +26,7 @@ class App extends Component {
         <BrowserRouter>
           <NavBar user={this.state.user} />
           <Switch>
+            <Route path="/services" exact component={ServiceListView} />
             <Route path="/" exact component={HomeComponent} />
             <ProtectedRoute
               path="/sign-up"
@@ -42,7 +43,6 @@ class App extends Component {
             {/*  <Route path="/error" component={ErrorView} />
             <Redirect to="/error" /> */}
             <SubscriptionListView />
-            <ServiceListView />
           </Switch>
         </BrowserRouter>
       </div>
