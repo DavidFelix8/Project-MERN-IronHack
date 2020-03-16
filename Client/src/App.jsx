@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,7 +11,7 @@ import AuthenticationSignInView from './Views/Authentication/SignIn';
 import HomeComponent from './components/Home';
 import SubscriptionListView from './Views/SubscriptionList';
 import ServiceListView from './Views/ServiceList';
-import ErrorView from './Views/Error';
+// import ErrorView from './Views/Error';
 
 class App extends Component {
   constructor() {
@@ -26,8 +26,9 @@ class App extends Component {
         <BrowserRouter>
           <NavBar user={this.state.user} />
           <Switch>
-            <Route path="/services" exact component={ServiceListView} />
             <Route path="/" exact component={HomeComponent} />
+            <Route path="/services" exact component={ServiceListView} />
+            <Route path="/subscriptions" exact component={SubscriptionListView} />
             <ProtectedRoute
               path="/sign-up"
               authorized={!this.state.user}
@@ -42,7 +43,6 @@ class App extends Component {
             />
             {/*  <Route path="/error" component={ErrorView} />
             <Redirect to="/error" /> */}
-            <SubscriptionListView />
           </Switch>
         </BrowserRouter>
       </div>

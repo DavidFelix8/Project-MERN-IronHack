@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AboutUs from './../../Views/AboutUs';
 import CarrouselView from './../../Views/Carrousel';
 import MostPopularServicesView from './../../Views/MostPopularService';
