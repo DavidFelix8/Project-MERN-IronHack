@@ -42,7 +42,6 @@ class App extends Component {
             {/*  <Route path="/error" component={ErrorView} />
             <Redirect to="/error" /> */}
             <SubscriptionListView />
-            <ServiceListView />
           </Switch>
         </BrowserRouter>
       </div>
