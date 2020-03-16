@@ -1,13 +1,13 @@
 {
   "subscription": [
     {
-      "_id": "abcsdada",
+      "_id": "1",
       "title": "base",
       "categories": ["home_maintenance", "cleaning", "home_appliance_repairs"],
       "price": { "amount": 15000, "currency": "EUR" }
     },
     {
-      "_id": "abcsdada",
+      "_id": "2",
       "title": "premium",
       "categories": [
         "health_and_fitness",
@@ -19,7 +19,7 @@
       "price": { "amount": 20000, "currency": "EUR" }
     },
     {
-      "_id": "abcsdagfsdfda",
+      "_id": "3",
       "title": "star",
       "categories": [
         "cleaning",

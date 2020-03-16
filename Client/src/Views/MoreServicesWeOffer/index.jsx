@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Parallax, Image } from 'react-scroll-parallax';
+//import { Parallax, Image } from 'react-scroll-parallax';
 import './style.scss';
 
 class MoreServicesWeOfferView extends Component {
