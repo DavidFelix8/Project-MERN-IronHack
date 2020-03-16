@@ -5,7 +5,7 @@ const { Router } = express;
 
 const router = new Router();
 
-router.get('/faq', (req, res, next) => {
+router.get('/', (req, res, next) => {
   try {
   } catch (error) {
     next(error);

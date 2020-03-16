@@ -6,7 +6,7 @@ const { Router } = express;
 const router = new Router();
 const Service = require('./../models/service');
 
-router.get('/services', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
     const services = await Service.find();
     res.json({ services });
@@ -15,5 +15,23 @@ router.get('/services', async (req, res, next) => {
   }
 });
 
-router.get;
+router.post('/create-service', async (req, res, next) => {
+  //object should have the same properties as the model
+  // name, category, image, description
+  const { name, category, image, description } = req.body;
+  const serviceObj = {
+    name,
+    category,
+    image,
+    description
+  };
+  console.log(serviceObj);
+  try {
+    const newService = await Service.create(serviceObj);
+    res.json({ newService });
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
