@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import AuthenticationSignUpView from './Views/Authentication/SignUp';
 import AuthenticationSignInView from './Views/Authentication/SignIn';
 import HomeComponent from './components/Home';
+import SubscriptionListView from './Views/SubscriptionList';
 import ErrorView from './Views/Error';
 
 class App extends Component {
@@ -40,6 +41,7 @@ class App extends Component {
 
             {/*  <Route path="/error" component={ErrorView} />
             <Redirect to="/error" /> */}
+            <SubscriptionListView />
           </Switch>
         </BrowserRouter>
       </div>

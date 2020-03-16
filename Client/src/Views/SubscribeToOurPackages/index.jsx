@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-import PackageListView from './../PackageList';
+import SubscriptionListView from '../SubscriptionList';
 
 class SubscribeToOurPackagesView extends Component {
   render() {
