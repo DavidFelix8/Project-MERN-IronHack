@@ -9,21 +9,21 @@ class CarrouselView extends Component {
         <Carousel>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+              className="Carroussel-Img d-block w-100"
               src="https://source.unsplash.com/1000x600/?cupcake beside fork and knife"
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+              className="Carroussel-Img d-block w-100"
               src="https://source.unsplash.com/1000x600/?black smartphone on black computer keyboard"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+              className="Carroussel-Img d-block w-100"
               src="https://source.unsplash.com/1000x600/?woman wearing one-piece swimsuit sitting on chair while looking outside"
               alt="Third slide"
             />

@@ -6,7 +6,7 @@ class SubscribeToOurPackagesView extends Component {
     return (
       <section className="SubscribeToOurPackages-Section">
         <hr />
-        <a href="" className="SubscribeToOurPackages-link">
+        <a href="" target="_blank" className="SubscribeToOurPackages-link">
           SUBSCRIBE TO OUR PACKAGES !
         </a>
       </section>
