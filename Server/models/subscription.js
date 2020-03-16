@@ -3,11 +3,11 @@
 const mongoose = require('mongoose');
 
 const schema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
     enum: ['basic', 'medium', 'full']
   },
-  services: [
+  categories: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Service'
