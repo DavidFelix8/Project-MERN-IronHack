@@ -1,6 +1,6 @@
 'use strict';
 
-const express = required('express');
+const express = require('express');
 const { Router } = express;
 
 const router = new Router();
@@ -15,5 +15,14 @@ router.get('/subscription', async (req, res, next) => {
   }
 });
 
-router.get;
+router.get('/:id', async (req, res, next) => {
+  const id = req.params.id;
+  try {
+    const subscription = await Subscription.findById(id);
+    res.json({ subscription });
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;

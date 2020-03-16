@@ -1,6 +1,6 @@
 'use strict';
 
-const express = required('express');
+const express = require('express');
 const { Router } = express;
 
 const router = new Router();
