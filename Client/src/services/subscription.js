@@ -7,7 +7,8 @@ const instance = axios.create({
 const list = async () => {
   try {
     const result = await instance.get('/subscription');
-    const subscriptions = result.data.subscriptions;
+    console.log(result);
+    const subscriptions = result.data.subscription;
     return subscriptions;
   } catch (error) {
     throw error;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 
-import { list as listSubscriptions } from './../../services/subscription';
+import { list } from './../../services/subscription';
 import SubscriptionsList from '../../components/SubscriptionList';
 
 class SubscriptionListView extends Component {
@@ -10,33 +10,43 @@ class SubscriptionListView extends Component {
     this.state = {
       subscriptions: []
     };
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
+    console.log('Running');
     this.fetchData();
   }
 
-  fetchData() {
-    listSubscriptions()
-      .then(subscriptions => {
-        this.setState({
-          subscriptions
-        });
-      })
-      .catch(error => {
-        console.log(error);
-      });
+  async fetchData() {
+    try {
+      const subscriptions = await list();
+      console.log(subscriptions);
+      this.setState({ subscriptions });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   render() {
+    const subscriptions = this.state.subscriptions;
     return (
       <div>
-        {this.state.subscriptions.map(subscription => (
-          <SubscriptionsList key={subscription._id} {...subscription} />
-        ))}
+        <p>This is Subscription List</p>
+        <ul>
+          {subscriptions.map(subscription => (
+            <SubscriptionsList key={subscription._id} {...subscription} />
+          ))}
+        </ul>
       </div>
     );
   }
+}
+
+{
+  /*{subscriptions.map(subscription => (
+  <SubscriptionsList key={subscription._id} {...subscription} />
+))}*/
 }
 
 export default SubscriptionListView;
