@@ -17,7 +17,7 @@ const schema = new mongoose.Schema({
     type: String
   },
   location: {
-    type: string
+    type: String
     // required: true  To add google maps later if we can otherwise just a form with location
   },
   subscription: {
@@ -25,7 +25,7 @@ const schema = new mongoose.Schema({
     ref: 'Subscription'
   },
   charged: {
-    type: boolean
+    type: Boolean
   }
 });
 
