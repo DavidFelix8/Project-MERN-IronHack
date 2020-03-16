@@ -31,7 +31,7 @@ class ServiceListView extends Component {
         <p>Here is our Service List</p>
         <ul>
           {services.map(service => (
-            <li>{service.name}</li>
+            <li key={service._id}>{service.name}</li>
           ))}
         </ul>
       </div>
