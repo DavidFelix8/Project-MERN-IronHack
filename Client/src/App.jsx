@@ -11,7 +11,7 @@ import AuthenticationSignInView from './Views/Authentication/SignIn';
 import HomeComponent from './components/Home';
 import SubscriptionListView from './Views/SubscriptionList';
 import ServiceListView from './Views/ServiceList';
-import ProfileView from './Views/Profile';
+import MyAccountView from './Views/MyAccount';
 import CancelSubscriptionView from './Views/CancelSubscription';
 // import ErrorView from './Views/Error';
 
@@ -29,7 +29,7 @@ class App extends Component {
           <NavBar user={this.state.user} />
           <Switch>
             <Route path="/" exact component={HomeComponent} />
-            <Route path="/profile" exact component={ProfileView} />
+            <Route path="/profile" exact component={MyAccountView} />
             <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
             <Route path="/services" exact component={ServiceListView} />
             <Route path="/subscriptions" exact component={SubscriptionListView} />

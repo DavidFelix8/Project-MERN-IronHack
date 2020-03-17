@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 
-export class ProfileView extends Component {
+export class MyAccountView extends Component {
   render() {
     return (
       <section id="d-flex flex-column">
@@ -18,4 +18,4 @@ export class ProfileView extends Component {
   }
 }
 
-export default ProfileView;
+export default MyAccountView;
