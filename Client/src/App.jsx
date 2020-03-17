@@ -29,7 +29,7 @@ class App extends Component {
           <NavBar user={this.state.user} />
           <Switch>
             <Route path="/" exact component={HomeComponent} />
-            <Route path="/profile" exact component={MyAccountView} />
+            <Route path="/my-account" exact component={MyAccountView} />
             <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
             <Route path="/services" exact component={ServiceListView} />
             <Route path="/subscriptions" exact component={SubscriptionListView} />
