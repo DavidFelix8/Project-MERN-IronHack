@@ -77,6 +77,7 @@ class App extends Component {
             <Redirect to="/error" />
           </Switch>
         </BrowserRouter>} */}
+
         {(this.state.loaded && (
           <BrowserRouter>
             <NavBar user={this.state.user} updateUserInformation={this.updateUserInformation} />
@@ -85,6 +86,7 @@ class App extends Component {
               <Route path="/my-account" exact component={MyAccountView} />
               <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
               <Route path="/services" exact component={ServiceListView} />
+              <Route path="/contact" exact component={ContactsView} />
               <Route path="/subscriptions" exact component={SubscriptionListView} />
               <ProtectedRoute
                 path="/sign-up"
