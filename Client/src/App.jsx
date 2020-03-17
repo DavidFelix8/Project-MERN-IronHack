@@ -13,7 +13,6 @@ import AuthenticationSignInView from './Views/Authentication/SignIn';
 import HomeComponent from './components/Home';
 import SubscriptionListView from './Views/SubscriptionList';
 import ServiceListView from './Views/ServiceList';
-import MyAccountView from './Views/MyAccount';
 import ContactsView from './Views/Contacts';
 import CancelSubscriptionView from './Views/CancelSubscription';
 import ErrorView from './Views/Error';
@@ -52,38 +51,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*    {<BrowserRouter>
-          <NavBar user={this.state.user} />
-          <Switch>
-            <Route path="/" exact component={HomeComponent} />
-            <Route path="/my-account" exact component={MyAccountView} />
-            <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
-            <Route path="/services" exact component={ServiceListView} />
-            <Route path="/contact" exact component={ContactsView} />
-            <Route path="/subscriptions" exact component={SubscriptionListView} />
-            <ProtectedRoute
-              path="/sign-up"
-              authorized={!this.state.user}
-              redirect={'/'}
-              render={props => <AuthenticationSignUpView {...props} />}
-            />
-            <ProtectedRoute
-              path="/sign-in"
-              authorized={!this.state.user}
-              redirect={'/'}
-              render={props => <AuthenticationSignInView {...props} />}
-            />
-             <Route path="/error" component={ErrorView} />
-            <Redirect to="/error" />
-          </Switch>
-        </BrowserRouter>} */}
-
         {(this.state.loaded && (
           <BrowserRouter>
             <NavBar user={this.state.user} updateUserInformation={this.updateUserInformation} />
             <Switch>
               <Route path="/" exact component={HomeComponent} />
-              <Route path="/my-account" exact component={MyAccountView} />
+              {<Route path="/my-account" exact component={PrivateView} />}
               <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
               <Route path="/services" exact component={ServiceListView} />
               <Route path="/contact" exact component={ContactsView} />
@@ -113,7 +86,7 @@ class App extends Component {
               <ProtectedRoute
                 authorized={this.state.user}
                 redirect="/sign-in"
-                path="/private/edit"
+                path="/my-account/edit"
                 render={props => (
                   <PrivateEditView
                     updateUserInformation={this.updateUserInformation}
@@ -125,7 +98,7 @@ class App extends Component {
               <ProtectedRoute
                 authorized={this.state.user}
                 redirect="/sign-in"
-                path="/private"
+                path="/my-account"
                 render={props => <PrivateView user={this.state.user} {...props} />}
               />
               <Route path="/error" component={ErrorView} />

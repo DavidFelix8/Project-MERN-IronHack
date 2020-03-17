@@ -33,7 +33,7 @@ class PrivateEditView extends Component {
         subscription
       });
       this.props.updateUserInformation(user);
-      this.props.history.push('/private');
+      this.props.history.push('/my-account');
     } catch (error) {
       console.log(error);
     }
@@ -79,7 +79,9 @@ class PrivateEditView extends Component {
             onChange={this.handleInputChange}
             value={this.state.email}
           />
-          <p>change subscription type</p>
+
+          <a href="/subscriptions">Change Subscription Type</a>
+          <a href="/cancel-subscription">Cancel Subscription</a>
           <button>Update Profile</button>
         </form>
       </div>
