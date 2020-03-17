@@ -77,6 +77,7 @@ class App extends Component {
             <Redirect to="/error" />
           </Switch>
         </BrowserRouter>} */}
+
         {(this.state.loaded && (
           <BrowserRouter>
             <NavBar user={this.state.user} updateUserInformation={this.updateUserInformation} />

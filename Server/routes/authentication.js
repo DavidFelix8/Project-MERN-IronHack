@@ -27,6 +27,10 @@ router.post('/sign-up', (req, res, next) => {
     });
 });
 
+router.get('/user-information', (req, res, next) => {
+  res.json({ user: req.user || null });
+});
+
 router.post('/sign-in', (req, res, next) => {
   let user;
   const { email, password } = req.body;
