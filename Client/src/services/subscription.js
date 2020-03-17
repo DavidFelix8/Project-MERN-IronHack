@@ -16,7 +16,7 @@ const list = async () => {
 };
 
 const load = async id => {
-  const result = await instance.get(`${id}`);
+  const result = await instance.get(`/${id}`);
   const subscription = result.data.subscription;
   return subscription;
 };

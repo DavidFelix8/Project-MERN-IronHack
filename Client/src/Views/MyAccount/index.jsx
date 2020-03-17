@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 
-export class MyAccountView extends Component {
+class MyAccountView extends Component {
   render() {
     return (
       <section id="d-flex flex-column">

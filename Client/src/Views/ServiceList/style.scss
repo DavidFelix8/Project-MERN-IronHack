@@ -1,0 +1,55 @@
+@media (max-width: 325px) {
+  .ServiceList-li-Categories {
+    font-size: 1rem;
+  }
+  .ServiceList-li-Services {
+    flex: 1 0 100%;
+  }
+}
+
+.ServiceList-li-Categories {
+  display: flex;
+  font-weight: bold;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.ServiceList-ul-services {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.ServiceList-li-Services {
+  justify-content: center;
+  display: flex;
+  flex: 1 0 50%;
+  text-align: start;
+  box-sizing: border-box;
+}
+
+@media (min-width: 550px) {
+  .ServiceList-li-Categories {
+    font-size: 1.4rem;
+  }
+  .ServiceList-li-Services {
+    flex: 1 0 30%;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .ServiceList-li-Categories {
+    font-size: 2rem;
+  }
+  .ServiceList-li-Services {
+    flex: 1 0 30%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .ServiceList-li-Services {
+    flex: 1 0 25%;
+  }
+}

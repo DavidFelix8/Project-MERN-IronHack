@@ -12,6 +12,7 @@ import HomeComponent from './components/Home';
 import SubscriptionListView from './Views/SubscriptionList';
 import ServiceListView from './Views/ServiceList';
 import MyAccountView from './Views/MyAccount';
+import ContactsView from './Views/Contacts';
 import CancelSubscriptionView from './Views/CancelSubscription';
 // import ErrorView from './Views/Error';
 
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path="/my-account" exact component={MyAccountView} />
             <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
             <Route path="/services" exact component={ServiceListView} />
+            <Route path="/contact" exact component={ContactsView} />
             <Route path="/subscriptions" exact component={SubscriptionListView} />
             <ProtectedRoute
               path="/sign-up"

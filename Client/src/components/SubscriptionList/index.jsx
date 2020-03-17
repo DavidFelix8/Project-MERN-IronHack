@@ -4,14 +4,19 @@ import { Card, Button } from 'react-bootstrap';
 function SubscriptionList(props) {
   return (
     <section>
-      <h1>{props.title}</h1>
-      <div className="d-flex justify-content-md-around">
+      <div className="d-flex flex-column justify-content-md-around align-items-center mt-4">
+        <h1 className="text-capitalize">{props.title}</h1>
         <Card style={{ width: '18rem', height: '30rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" alt="Image" />
+          <Card.Img
+            variant="top"
+            src="https://source.unsplash.com/1000x600/?monthly"
+            alt="Subscription"
+          />
           <Card.Body className="d-flex flex-column justify-content-between">
             <Card.Title></Card.Title>
             <Card.Text>Services Included: {props.categories}</Card.Text>
-            <Button variant="primary">{props.price.amount}</Button>
+            <Card.Text>Subscription Price: {props.price.amount}</Card.Text>
+            <Button variant="primary">Buy</Button>
           </Card.Body>
         </Card>
       </div>

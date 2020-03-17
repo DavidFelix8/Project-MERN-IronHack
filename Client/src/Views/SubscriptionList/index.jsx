@@ -32,8 +32,8 @@ class SubscriptionListView extends Component {
     const subscriptions = this.state.subscriptions;
     return (
       <div>
-        <p>This is Subscription List</p>
-        <ul>
+        {/* <p>This is Subscription List</p> */}
+        <ul className="SubscriptionView-Ul">
           {subscriptions.map(subscription => (
             <SubscriptionsList key={subscription._id} {...subscription} />
           ))}

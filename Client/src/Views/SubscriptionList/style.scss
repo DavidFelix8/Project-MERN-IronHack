@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1000px) {
+  .SubscriptionView-Ul {
+    display: flex;
+    flex-direction: flex-column;
+    justify-content: space-around;
+    margin-top: 4rem;
+  }
+}
