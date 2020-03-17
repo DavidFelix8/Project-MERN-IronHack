@@ -36,4 +36,25 @@ const signOut = () =>
       .catch(reject);
   });
 
-export { signIn, signUp, signOut };
+const loadUserInformation = () =>
+  new Promise((resolve, reject) => {
+    instance
+      .get('/user-information')
+      .then(result => {
+        const user = result.data.user;
+        resolve(user);
+      })
+      .catch(reject);
+  });
+
+const editUserInformation = async data => {
+  const form = new FormData();
+  form.append('name', data.name);
+  form.append('email', data.email);
+  form.append('subscription', data.subscription);
+  const result = await instance.patch('/user-information', form);
+  const user = result.data.user;
+  return user;
+};
+
+export { signIn, signUp, signOut, loadUserInformation, editUserInformation };

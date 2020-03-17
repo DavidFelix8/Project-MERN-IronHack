@@ -1,29 +1,36 @@
-import React, { Component } from 'react';
-//import { Navbar } from 'react-bootstrap/Navbar';
-import { Navbar, Nav } from 'react-bootstrap';
+//import { Navbar, Nav } from 'react-bootstrap';
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import './style.scss';
-class NavBar extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand href="/">Nome da APP</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="/services">Services</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/my-account">My Account</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="/sign-in">Log In</Nav.Link>
-              <Nav.Link href="/sign-up">Sign Up</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
-    );
-  }
-}
+import { signOut } from '../../services/authentication';
+
+const NavBar = props => {
+  const handleSignOut = () => {
+    signOut()
+      .then(() => {
+        props.updateUserInformation(null);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  return (
+    <nav className="nav-bar">
+      <Link to="/">Shop</Link>
+      {(props.user && (
+        <Fragment>
+          <Link to="/private">{props.user.name}'s Profile</Link>
+          <button onClick={handleSignOut}>Sign Out</button>
+        </Fragment>
+      )) || (
+        <Fragment>
+          <Link to="/sign-in">Sign In</Link>
+          <Link to="/sign-up">Sign Up</Link>
+        </Fragment>
+      )}
+    </nav>
+  );
+};
 
 export default NavBar;
