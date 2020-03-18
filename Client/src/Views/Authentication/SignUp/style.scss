@@ -1,0 +1,27 @@
+.SignUp-SectionMaster {
+  margin-top: 5rem;
+}
+.SignUp-Form {
+  display: flex;
+  flex-direction: column;
+}
+.SignUp-Input {
+  border: none;
+  border-bottom: 1px solid #58a4b0;
+  margin: 1rem;
+}
+.SignUp-Label {
+  display: flex;
+  margin-left: 1rem;
+}
+.SignUp-btn {
+  border: none;
+  width: 30%;
+  margin: 0 auto;
+}
+.SignUp-PassShort {
+  display: flex;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}

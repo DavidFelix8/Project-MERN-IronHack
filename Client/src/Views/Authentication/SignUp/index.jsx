@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { signUp } from './../../../services/authentication';
 
+import './style.scss';
+
 class AuthenticationSignUpView extends Component {
   constructor(props) {
     super(props);
@@ -39,10 +41,11 @@ class AuthenticationSignUpView extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmission} className="d-flex flex-column">
-          <label htmlFor="name">Name</label>
+      <section className="SignUp-SectionMaster">
+        <form className="SignUp-Form" onSubmit={this.handleFormSubmission} className="d-flex flex-column">
+          <label className="SignUp-Label" htmlFor="name">Name</label>
           <input
+          className="SignUp-Input"
             id="name"
             name="name"
             type="text"
@@ -50,8 +53,9 @@ class AuthenticationSignUpView extends Component {
             onChange={this.handleInputChange}
             value={this.state.name}
           />
-          <label htmlFor="email">Email</label>
+          <label className="SignUp-Label" htmlFor="email">Email</label>
           <input
+          className="SignUp-Input"
             id="email"
             name="email"
             type="email"
@@ -59,8 +63,9 @@ class AuthenticationSignUpView extends Component {
             onChange={this.handleInputChange}
             value={this.state.email}
           />
-          <label htmlFor="password">Password</label>
+          <label className="SignUp-Label" htmlFor="password">Password</label>
           <input
+          className="SignUp-Input"
             id="password"
             name="password"
             type="password"
@@ -69,11 +74,11 @@ class AuthenticationSignUpView extends Component {
             value={this.state.password}
           />
           {this.state.password && this.state.password.length < 8 && (
-            <small>Password is too short!</small>
+            <small className="SignUp-PassShort">Password is too short!</small>
           )}
-          <button disabled={this.state.password.length < 5}>Sign Up</button>
+          <button className="SignUp-btn" disabled={this.state.password.length < 8}>Sign Up</button>
         </form>
-      </div>
+      </section>
     );
   }
 }

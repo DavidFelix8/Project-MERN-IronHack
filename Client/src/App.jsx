@@ -105,7 +105,12 @@ class App extends Component {
               <Redirect to="/error" />
             </Switch>
           </BrowserRouter>
-        )) || <span>Loading...</span>}
+        )) || (
+          <div className="loading">
+            <span className="loading-text">Loading...</span>
+            <img className="loading-img" src="./images/loading.svg" alt="Loading" />
+          </div>
+        )}
       </div>
     );
   }

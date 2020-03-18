@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { editUserInformation } from '../../services/authentication';
 
+import './style.scss';
+
 class PrivateEditView extends Component {
   constructor(props) {
     super(props);
@@ -57,12 +59,15 @@ class PrivateEditView extends Component {
   render() {
     const user = this.props.user;
     return (
-      <div>
-        <p>Type of subscription {user.subscription}</p>
+      <section className="PrivateEdit-SectionMaster">
+        <p className="mt-4">Type of subscription {user.subscription}</p>
 
-        <form onSubmit={this.handleFormSubmission}>
-          <label htmlFor="name">Name</label>
+        <form className="PrivateEdit-Form" onSubmit={this.handleFormSubmission}>
+          <label className="PrivateEdit-Label" htmlFor="name">
+            Name:
+          </label>
           <input
+            className="PrivateEdit-Input"
             id="name"
             name="name"
             type="text"
@@ -70,8 +75,11 @@ class PrivateEditView extends Component {
             onChange={this.handleInputChange}
             value={this.state.name}
           />
-          <label htmlFor="email">Email</label>
+          <label className="PrivateEdit-Label" htmlFor="email">
+            Email:
+          </label>
           <input
+            className="PrivateEdit-Input"
             id="email"
             name="email"
             type="email"
@@ -80,11 +88,17 @@ class PrivateEditView extends Component {
             value={this.state.email}
           />
 
-          <a href="/subscriptions">Change Subscription Type</a>
-          <a href="/cancel-subscription">Cancel Subscription</a>
-          <button>Update Profile</button>
+          <button className="PrivateEdit-btn-Update">Update Profile</button>
+          <div className="PrivateEdit-Subs">
+            <a className="PrivateEdit-changeSubs" href="/subscriptions">
+              Change Subscription Type
+            </a>
+            <a className="PrivateEdit-cancelSubs" href="/cancel-subscription">
+              Cancel Subscription
+            </a>
+          </div>
         </form>
-      </div>
+      </section>
     );
   }
 }
