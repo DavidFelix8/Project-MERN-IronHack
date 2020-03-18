@@ -6,18 +6,16 @@
 .MostPopularServices-Img {
   width: 5rem;
   height: 5rem;
-  @media(min-width: 700px){
-    width:10rem;
-    height:10rem;
+  @media (min-width: 700px) {
+    width: 10rem;
+    height: 10rem;
   }
 }
-
-
 
 .MostPopularServices-Text {
   font-size: 0.7rem;
   margin: 0.3rem 1rem;
-  @media(min-width: 700px){
+  @media (min-width: 700px) {
     font-size: 2rem;
   }
 }

@@ -10,21 +10,21 @@ class CarrouselView extends Component {
           <Carousel.Item>
             <img
               className="Carroussel-Img d-block w-100"
-              src="https://source.unsplash.com/1000x600/?cupcake beside fork and knife"
+              src="./images/Carousel/happy-familly.jpg"
               alt="First slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="Carroussel-Img d-block w-100"
-              src="https://source.unsplash.com/1000x600/?black smartphone on black computer keyboard"
+              src="./images/Carousel/cleaning-services.jpeg"
               alt="Third slide"
             />
           </Carousel.Item>
           <Carousel.Item>
             <img
               className="Carroussel-Img d-block w-100"
-              src="https://source.unsplash.com/1000x600/?woman wearing one-piece swimsuit sitting on chair while looking outside"
+              src="./images/Carousel/can-we-help.jpg"
               alt="Third slide"
             />
             <Carousel.Caption>
@@ -32,8 +32,6 @@ class CarrouselView extends Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-
-       
       </div>
     );
   }

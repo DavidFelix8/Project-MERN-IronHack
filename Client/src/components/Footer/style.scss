@@ -1,0 +1,25 @@
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.container-footer {
+  background-color: rgb(231, 229, 229);
+}
+
+.icons {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}

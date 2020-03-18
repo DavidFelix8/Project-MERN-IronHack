@@ -5,6 +5,8 @@ import CarrouselView from './../../Views/Carrousel';
 import MostPopularServicesView from './../../Views/MostPopularService';
 import MoreServicesWeOfferView from './../../Views/MoreServicesWeOffer';
 import SubscribeToOurPackagesView from './../../Views/SubscribeToOurPackages';
+import Sponsors from './../../components/Sponsorship';
+import Footer from './../../components/Footer';
 
 export class HomeComponent extends Component {
   render() {
@@ -16,6 +18,8 @@ export class HomeComponent extends Component {
           <MostPopularServicesView />
           <MoreServicesWeOfferView />
           <SubscribeToOurPackagesView />
+          <Sponsors />
+          <Footer />
         </BrowserRouter>
       </div>
     );
