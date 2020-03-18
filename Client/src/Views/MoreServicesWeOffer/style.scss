@@ -16,6 +16,11 @@ ul {
   text-align: start;
 }
 
+.moreserviceoffer {
+  display: flex;
+  justify-content: space-around;
+}
+
 .MoreServicesWeOffer-Title {
   font-size: 1rem;
   margin-bottom: 0.8rem;
@@ -24,8 +29,4 @@ ul {
 .MoreServicesWeOffer-Text {
   font-size: 0.7rem;
   text-align: left;
-}
-
-.moreserviceoffer {
-  display: flex;
 }

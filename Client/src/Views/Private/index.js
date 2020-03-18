@@ -16,8 +16,13 @@ class PrivateView extends Component {
           </div>  */}
         <section id="d-flex flex-column">
           <div className="MyAccount-Subs">
-            <h2 className="MyAccount-Text">Your Subscription Includes:</h2>
+            <h2 className="MyAccount-Text">Your Subscription Includes:</h2> 
             {/* <h2>{categories}</h2> */}
+            <ul className="MyAccount-Includes">
+              <li>sdadas</li>
+              <li>dsasd</li>
+              <li>dadad</li>
+            </ul>
           </div>
           <div className="MyAccount-Subs">
             <h2 className="MyAccount-Text">Your subscription ends at:</h2>

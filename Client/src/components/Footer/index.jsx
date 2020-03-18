@@ -5,7 +5,7 @@ function Footer() {
   return (
     <div className="container-footer">
       <div className="footer-links">
-        <ul>
+        <ul className="Footer-ul">
           <li>
             <a>About us</a>
           </li>

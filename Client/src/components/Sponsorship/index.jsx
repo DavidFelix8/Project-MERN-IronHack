@@ -5,9 +5,8 @@ import './style.scss';
 function Sponsors() {
   return (
     <div className="container-sponsor">
-      <hr />
-      <h3>Our Sponsors:</h3>
-      <Container>
+      <h3 className="mt-4">Our Sponsors:</h3>
+      <Container className="mt-4">
         <Row className="container-row">
           <Col className="container-col">
             <Image
