@@ -105,9 +105,13 @@ class App extends Component {
               <Route path="/error" component={ErrorView} />
               <Redirect to="/error" />
             </Switch>
-            <Sponsors />
           </BrowserRouter>
-        )) || <span>Loading...</span>}
+        )) || (
+          <div className="loading">
+            <span className="loading-text">Loading...</span>
+            <img className="loading-img" src="./images/loading.svg" alt="Loading" />
+          </div>
+        )}
       </div>
     );
   }

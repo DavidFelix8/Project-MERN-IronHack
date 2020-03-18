@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const schema = new mongoose.Schema({
   title: {
     type: String,
-    enum: ['basic', 'medium', 'full']
+    enum: ['Base', 'Premium', 'Star']
   },
   categories: [
     {

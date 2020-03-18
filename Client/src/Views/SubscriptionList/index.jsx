@@ -21,7 +21,7 @@ class SubscriptionListView extends Component {
   async fetchData() {
     try {
       const subscriptions = await list();
-      // console.log(subscriptions);
+      console.log(subscriptions);
       this.setState({ subscriptions });
     } catch (error) {
       console.log(error);
@@ -42,6 +42,5 @@ class SubscriptionListView extends Component {
     );
   }
 }
-
 
 export default SubscriptionListView;
