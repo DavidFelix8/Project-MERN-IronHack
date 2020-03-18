@@ -17,20 +17,20 @@ router.get('/', async (req, res, next) => {
 
 //This router would be used only if there is an administrator in the future
 
-// router.post('/create-subscription', async (req, res, next) => {
-//   const { title, category, price } = req.body;
-//   const subscriptionObj = {
-//     title,
-//     category,
-//     price
-//   };
-//   console.log(subscriptionObj);
-//   try {
-//     const newSubscription = await Subscription.create(subscriptionObj);
-//     res.json({ newSubscription });
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+router.post('/create-subscription', async (req, res, next) => {
+  const { title, category, price } = req.body;
+  const subscriptionObj = {
+    title,
+    category,
+    price
+  };
+  console.log(subscriptionObj);
+  try {
+    const newSubscription = await Subscription.create(subscriptionObj);
+    res.json({ newSubscription });
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;

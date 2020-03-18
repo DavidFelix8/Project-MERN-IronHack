@@ -9,6 +9,8 @@ const schema = new mongoose.Schema({
   },
   categories: [
     {
+      /* type: mongoose.Schema.Types.ObjectId,
+      ref: 'Service' */
       type: String
     }
   ],
