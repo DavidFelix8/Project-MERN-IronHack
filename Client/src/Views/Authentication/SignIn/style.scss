@@ -1,0 +1,21 @@
+.SignIn-SectionMaster {
+  margin-top: 5rem;
+}
+.SignIn-Form {
+  display: flex;
+  flex-direction: column;
+}
+.SignIn-Input {
+  border: none;
+  border-bottom: 1px solid #58a4b0;
+  margin: 1rem;
+}
+.SignIn-Label {
+  display: flex;
+  margin-left: 1rem;
+}
+.SignIn-btn {
+  border: none;
+  width: 30%;
+  margin: 0 auto;
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
+import './style.scss';
+
 import formatPrice from './../../utilities/format-price';
 
 function SubscriptionList(props) {
@@ -8,7 +10,7 @@ function SubscriptionList(props) {
     <section>
       <div className="d-flex flex-column justify-content-md-around align-items-center mt-4">
         <h1 className="text-capitalize">{props.title}</h1>
-        <Card style={{ width: '18rem', height: '30rem' }}>
+        <Card className="SubscriptionList-Card" style={{ width: '18rem', height: '30rem' }}>
           <Card.Img
             variant="top"
             src="https://source.unsplash.com/1000x600/?star"

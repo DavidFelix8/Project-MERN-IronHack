@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { signIn } from './../../../services/authentication';
 
+import './style.scss';
+
 class AuthenticationSignInView extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +13,7 @@ class AuthenticationSignInView extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
-  }             
+  }
 
   async handleFormSubmission(event) {
     event.preventDefault();
@@ -37,10 +39,17 @@ class AuthenticationSignInView extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleFormSubmission} className="d-flex flex-column">
-          <label htmlFor="email">Email</label>
+      <section className="SignIn-SectionMaster">
+        <form
+          className="SignIn-Form"
+          onSubmit={this.handleFormSubmission}
+          className="d-flex flex-column"
+        >
+          <label className="SignIn-Label" htmlFor="email">
+            Email
+          </label>
           <input
+            className="SignIn-Input"
             id="email"
             name="email"
             type="email"
@@ -48,8 +57,11 @@ class AuthenticationSignInView extends Component {
             onChange={this.handleInputChange}
             value={this.state.email}
           />
-          <label htmlFor="password">Password</label>
+          <label className="SignIn-Label" htmlFor="password">
+            Password
+          </label>
           <input
+            className="SignIn-Input"
             id="password"
             name="password"
             type="password"
@@ -57,9 +69,9 @@ class AuthenticationSignInView extends Component {
             onChange={this.handleInputChange}
             value={this.state.password}
           />
-          <button>Sign In</button>
+          <button className="SignIn-btn">Sign In</button>
         </form>
-      </div>
+      </section>
     );
   }
 }
