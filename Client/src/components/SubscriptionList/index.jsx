@@ -8,6 +8,7 @@ import formatPrice from './../../utilities/format-price';
 function SubscriptionList(props) {
   return (
     <section>
+      {/* <pre>{JSON.stringify(props, null, 2)}</pre> */}
       <div className="d-flex flex-column justify-content-md-around align-items-center mt-4">
         <h1 className="text-capitalize">{props.title}</h1>
         <Card className="SubscriptionList-Card" style={{ width: '18rem', height: '30rem' }}>

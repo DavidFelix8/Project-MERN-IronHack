@@ -6,14 +6,14 @@ import './style.scss';
 class PrivateView extends Component {
   render() {
     const user = this.props.user;
-    // console.log(user)
+    console.log(user);
     //User Undefined
     return (
       <div>
-        {/* <div>
-            <h1>{user.name}</h1>
-            <span>{user.email}</span>
-          </div>  */}
+        <div>
+          <h1>{user.name}</h1>
+          <span>{user.email}</span>
+        </div>
         <section id="d-flex flex-column">
           <div className="MyAccount-Subs">
             <h2 className="MyAccount-Text">Your Subscription Includes:</h2>

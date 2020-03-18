@@ -21,7 +21,7 @@ class SubscriptionListView extends Component {
   async fetchData() {
     try {
       const subscriptions = await list();
-      console.log(subscriptions);
+      // console.log(subscriptions);
       this.setState({ subscriptions });
     } catch (error) {
       console.log(error);
@@ -32,7 +32,7 @@ class SubscriptionListView extends Component {
     const subscriptions = this.state.subscriptions;
     return (
       <div>
-        {/* <p>This is Subscription List</p> */}
+        {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
         <ul className="SubscriptionView-Ul">
           {subscriptions.map(subscription => (
             <SubscriptionsList key={subscription._id} {...subscription} />
