@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Sponsors from './components/Sponsorship';
 import NavBar from './components/NavBar';
 import ProtectedRoute from './components/ProtectedRoute';
 
@@ -104,6 +105,7 @@ class App extends Component {
               <Route path="/error" component={ErrorView} />
               <Redirect to="/error" />
             </Switch>
+            <Sponsors />
           </BrowserRouter>
         )) || <span>Loading...</span>}
       </div>
