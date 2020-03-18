@@ -28,7 +28,7 @@ class CarrouselView extends Component {
               alt="Third slide"
             />
             <Carousel.Caption>
-              <h3>Third slide label</h3>
+              {/* <h3>Third slide label</h3> */}
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

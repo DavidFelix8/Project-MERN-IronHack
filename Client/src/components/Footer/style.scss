@@ -1,4 +1,4 @@
-ul {
+.Footer-ul {
   display: block;
   list-style-type: disc;
   margin-block-start: 1em;
@@ -21,5 +21,5 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
+  padding: 1rem;
 }

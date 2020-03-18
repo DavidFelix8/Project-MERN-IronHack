@@ -1,11 +1,17 @@
+.MyAccount-Text {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
 .MyAccount-Subs {
   width: 80%;
   height: inherit;
   margin: 2rem auto;
-  background-color: yellow;
+  border: 2px dotted yellow;
   border-radius: 0.5rem;
 }
-
-.MyAccount-Text {
-  font-size: 1rem;
+.MyAccount-Includes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
