@@ -5,42 +5,51 @@ import './style.scss';
 function Sponsors() {
   return (
     <div>
+      <hr />
       <h3>Our Sponsors:</h3>
       <Container>
         <Row>
           <Col xs={6} md={4}>
-            <Image src="" rounded alt="delivery-serviços" />
-          </Col>
-          <Col xs={6} md={4}>
             <Image
-              src=".\images\SponsorImg\health-fitness-serviçes-imagem.jpg"
+              src="./images/SponsorImg/delivery-servicos-image.png"
               rounded
-              alt="eventos-serviços"
+              alt="delivery-serviços"
             />
           </Col>
           <Col xs={6} md={4}>
             <Image
-              src="../../../public/images/SponsorImg/health-fitness-serviçes-imagem.jpg"
+              src="./images/SponsorImg/eventos-servicos-image.jpeg"
               rounded
-              alt="health-fitness"
+              alt="eventos-servicos"
             />
           </Col>
           <Col xs={6} md={4}>
             <Image
-              src="../../../public/images/SponsorImg/seguros-serviços-imagem.png"
+              src="./images/SponsorImg/health-fitness-services-image.jpg"
               rounded
-              alt="seguros-serviços"
+              alt="health-fitness-services"
             />
           </Col>
           <Col xs={6} md={4}>
             <Image
-              src="../../../public/images/SponsorImg/servico-limpeza-imagem.png"
+              src="./images/SponsorImg/seguros-servicos-image.png"
               rounded
-              alt="serviços-limpeza"
+              alt="serviços-seguros"
             />
           </Col>
           <Col xs={6} md={4}>
-            <Image src="../../../public/logo512.png" rounded alt="reparaçoes-serviços" />
+            <Image
+              src="./images/SponsorImg/servico-limpeza-imagem.png"
+              rounded
+              alt="limpeza-serviços"
+            />
+          </Col>
+          <Col xs={6} md={4}>
+            <Image
+              src="./images/SponsorImg/servicos-reparacoes-image.png"
+              rounded
+              alt="reparaçoes-serviços"
+            />
           </Col>
         </Row>
       </Container>
