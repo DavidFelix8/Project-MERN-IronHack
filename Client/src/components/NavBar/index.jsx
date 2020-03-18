@@ -24,7 +24,7 @@ const NavBar = props => {
             <Nav className="mr-auto">
               <Nav.Link href="/services">Services</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/my-account">My Account</Nav.Link>
+              <Nav.Link href="/my-account">{props.user.name}'s Account</Nav.Link>
               <button onClick={handleSignOut}>Sign Out</button>
             </Nav>
           )) || (

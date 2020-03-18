@@ -3,13 +3,19 @@ import React, { Component } from 'react';
 import './style.scss';
 
 class MoreServicesWeOfferView extends Component {
+  constructor(props) {
+    super();
+    this.state = {
+      services: []
+    };
+  }
   render() {
+    const services = this.state.services;
     return (
       <section>
         <h1 className="MoreServicesWeOffer-Title">More Services we offer:</h1>
         <div className="moreserviceoffer">
-          <article>
-            <ul>
+          {/* <ul>
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
@@ -78,22 +84,24 @@ class MoreServicesWeOfferView extends Component {
                 <a href="/" className="MoreServicesWeOffer-Text">
                   -Carpentry
                 </a>{' '}
-              </li>
-              <li>
+                </li>
+                <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  {' '}
-                  -Carpet
+                {' '}
+                -Carpet
                 </a>
-              </li>
-              <li>
+                </li>
+                <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
                   -Concrete
-                </a>{' '}
-              </li>
-            </ul>
-          </article>
+                  </a>{' '}
+                  </li>
+                </ul> */}
+          {services.map(service => (
+            <li key={service._id}>{service.name}</li>
+          ))}
         </div>
 
         <a href="/services">View all Categories</a>

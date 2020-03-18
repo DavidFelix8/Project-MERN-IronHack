@@ -15,7 +15,10 @@ function SubscriptionList(props) {
           <Card.Body className="d-flex flex-column justify-content-between">
             <Card.Title></Card.Title>
             <Card.Text>Services Included: {props.categories}</Card.Text>
-            <Card.Text>Subscription Price: {props.price.amount}</Card.Text>
+            <Card.Text>
+              Subscription Price: {props.price.amount}
+              {props.price.currency}
+            </Card.Text>
             <Button variant="primary">Buy</Button>
           </Card.Body>
         </Card>

@@ -8,16 +8,28 @@ class MostPopularServicesView extends Component {
         <h1 className="MostPopularServices-Title">Most Popular Services</h1>
         <div className="d-flex justify-content-around">
           <picture>
-            <img className="MostPopularServices-Img" src="./images/1.png" alt="" />
-            <h5 className="MostPopularServices-Text">This is one of the things</h5>
+            <img
+              className="MostPopularServices-Img"
+              src=".\images\PopularServices\CleaningIcon.jpg"
+              alt="CleaningIcon"
+            />
+            <h5 className="MostPopularServices-Text">Cleaning</h5>
           </picture>
           <picture>
-            <img className="MostPopularServices-Img" src="./images/1.png" alt="" />
-            <h5 className="MostPopularServices-Text">This is one of the things</h5>
+            <img
+              className="MostPopularServices-Img"
+              src=".\images\PopularServices\BusinessIcon.png"
+              alt="BusinessIcon"
+            />
+            <h5 className="MostPopularServices-Text">Business</h5>
           </picture>
           <picture>
-            <img className="MostPopularServices-Img" src="./images/1.png" alt="" />
-            <h5 className="MostPopularServices-Text">This is one of the things</h5>
+            <img
+              className="MostPopularServices-Img"
+              src=".\images\PopularServices\DeliveryIcon.png"
+              alt="DeliveryIcon"
+            />
+            <h5 className="MostPopularServices-Text">Delivery</h5>
           </picture>
         </div>
         <hr className="MostPopularServices-hr" />
