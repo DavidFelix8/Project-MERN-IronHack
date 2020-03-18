@@ -14,7 +14,7 @@ class ServiceListView extends Component {
   }
 
   componentDidMount() {
-    console.log('im running');
+    // console.log('im running');
     this.fetchData();
   }
 
@@ -25,7 +25,7 @@ class ServiceListView extends Component {
       services.map(service =>
         categories.indexOf(service.category[0]) < 0 ? categories.push(service.category[0]) : ''
       );
-      console.log(categories);
+      // console.log(categories);
       this.setState({ services, categories });
     } catch (error) {
       console.log(error);

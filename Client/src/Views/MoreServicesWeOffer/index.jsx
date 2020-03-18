@@ -13,32 +13,27 @@ class MoreServicesWeOfferView extends Component {
     const services = this.state.services;
     return (
       <section>
-        <h1 className="MoreServicesWeOffer-Title">More Services we offer:</h1>
+        <h1 className="MoreServicesWeOffer-Title">More Services we offer</h1>
         <div className="moreserviceoffer">
-          {/* <ul>
+          <article>
+            <ul>
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Serviços de limpeza
+                  - Painter
                 </a>{' '}
               </li>
 
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Reparações eléctricas
+                  - Business Setup
                 </a>{' '}
               </li>
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Brick & Stone
-                </a>{' '}
-              </li>
-              <li>
-                {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  -Appliances
+                  - Packers and Movers
                 </a>{' '}
               </li>
             </ul>
@@ -48,25 +43,19 @@ class MoreServicesWeOfferView extends Component {
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Reparações domésticas
+                  - Car Wash
                 </a>{' '}
               </li>
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Consultas e cuidados a doentes
+                  - Doctor at Home
                 </a>{' '}
               </li>
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Babysittting
-                </a>{' '}
-              </li>
-              <li>
-                {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  -Relocation
+                  - Gas Stove Repair
                 </a>{' '}
               </li>
             </ul>
@@ -76,34 +65,30 @@ class MoreServicesWeOfferView extends Component {
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Cabinets & Countertops
+                  - Event Planning
+                </a>{' '}
+              </li>
+
+              <li>
+                {' '}
+                <a href="/" className="MoreServicesWeOffer-Text">
+                  - Detective Agency
                 </a>{' '}
               </li>
               <li>
                 {' '}
                 <a href="/" className="MoreServicesWeOffer-Text">
-                  -Carpentry
-                </a>{' '}
-                </li>
-                <li>
-                {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                {' '}
-                -Carpet
+                  {' '}
+                  - Food
                 </a>
-                </li>
-                <li>
-                {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  -Concrete
-                  </a>{' '}
-                  </li>
-                </ul> */}
-          {services.map(service => (
+              </li>
+            </ul>
+          </article>
+          {/* We wanted to make a map throught the services name and slice so it would appear just 9 */}
+          {/* {services.map(service => (
             <li key={service._id}>{service.name}</li>
-          ))}
+          ))} */}
         </div>
-
         <a href="/services">View all Categories</a>
       </section>
     );
