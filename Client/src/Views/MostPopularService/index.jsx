@@ -10,7 +10,7 @@ class MostPopularServicesView extends Component {
           <picture>
             <img
               className="MostPopularServices-Img"
-              src=".\images\PopularServices\CleaningIcon.jpg"
+              src=".\images\PopularServices\CleaningIcon.png"
               alt="CleaningIcon"
             />
             <h5 className="MostPopularServices-Text">Cleaning</h5>

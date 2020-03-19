@@ -89,7 +89,7 @@ class MoreServicesWeOfferView extends Component {
             <li key={service._id}>{service.name}</li>
           ))} */}
         </div>
-        <a href="/services">View all Categories</a>
+        <a className="MoreServicesWeOffer-ViewAll" href="/services">View all Categories</a>
       </section>
     );
   }

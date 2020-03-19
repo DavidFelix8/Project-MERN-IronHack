@@ -19,7 +19,7 @@ function Footer() {
             <a href="/Subscriptions">Subscriptions</a>
           </li>
           <li>
-            <a>Contacts</a>
+            <a href="/contact">Contacts</a>
           </li>
           <li>
             <a>Cancellation Policy</a>

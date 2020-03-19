@@ -26,7 +26,7 @@ const NavBar = props => {
               <Nav.Link href="/contact">Contact</Nav.Link>
               <Nav.Link href="/my-account">{props.user.name}'s Account</Nav.Link>
               <button className="Navbar-SignOut" onClick={handleSignOut}>
-                Sign Out
+                <span>Sign Out</span>
               </button>
             </Nav>
           )) || (
