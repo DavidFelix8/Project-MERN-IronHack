@@ -1,15 +1,16 @@
 .Footer-ul {
   display: block;
   list-style-type: disc;
+  margin-bottom: 0px;
   margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   padding-inline-start: 40px;
   @media (min-width: 1000px) {
     display: flex;
     justify-content: space-around;
   }
+}
+.Footer-ul li {
+  margin-top: 1rem;
 }
 
 .container-footer {

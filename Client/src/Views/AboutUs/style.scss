@@ -1,36 +1,80 @@
 .About_Us-Wave {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23000b76' fill-opacity='1' d='M0,32L60,37.3C120,43,240,53,360,53.3C480,53,600,43,720,48C840,53,960,75,1080,96C1200,117,1320,139,1380,149.3L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z' %3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-color: rgb(231, 229, 229);
   min-height: 18rem;
+  @media only screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
   @media only screen and (min-width: 880px) {
     background-size: cover;
+  }
+  @media only screen and (min-width: 1001px) {
+    background-size: cover;
+    min-height: 60vh;
+  }
+}
+
+.AboutUs-div-top {
+  @media (min-width: 900px) {
+    width: 50%;
   }
 }
 
 .About_Us-Title {
+  font-weight: bold;
   font-size: 1.5rem;
-  margin-top: 25%;
-  @media only screen and (min-width: 700px) {
+  margin-top: 15%;
+  @media only screen and (min-width: 1000px) {
     font-size: 1.8rem;
-    margin-top: 20%;
+    margin-top: 0%;
   }
   @media only screen and (min-width: 900px) {
-    font-size: 1.8rem;
-    margin-top: 15%;
+    font-size: 2rem;
+  }
+}
+
+.Title-Second {
+  margin-top: 10%;
+}
+
+.About_Us-Text-First {
+  font-size: 1rem;
+  @media only screen and (min-width: 700px) {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+  @media only screen and (min-width: 1000px) {
+    font-size: 1.6rem;
+    margin-left: 3rem;
   }
 }
 
 .About_Us-Text {
+  line-height: 2rem;
   font-size: 0.8rem;
-  text-align: start;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5%;
+  // text-align: start;
   @media only screen and (min-width: 700px) {
     font-size: 1rem;
     margin-left: 2rem;
   }
   @media only screen and (min-width: 1000px) {
+    font-size: 1.5rem;
     margin-left: 3rem;
   }
+  span {
+    display: block;
+  }
+}
+
+.AboutUs-Span-SubsPack {
+  display: block;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }

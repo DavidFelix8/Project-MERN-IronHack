@@ -14,7 +14,7 @@ class MoreServicesWeOfferView extends Component {
     return (
       <section>
         <h1 className="MoreServicesWeOffer-Title">More Services we offer</h1>
-        <div className="moreserviceoffer">
+        <div className="Moreserviceoffer-div">
           <article>
             <ul>
               <li>

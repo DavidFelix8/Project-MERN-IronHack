@@ -4,6 +4,13 @@ import './style.scss';
 function Footer() {
   return (
     <div className="container-footer">
+       <div className="footer-icons">
+        <img className="icons" src="./images/SocialIcons/icon-insta.png"></img>
+        <img className="icons" src="./images/SocialIcons/icon-facebook.png"></img>
+        <img className="icons" src="./images/SocialIcons/icon-whatsapp.png"></img>
+        <img className="icons" src="./images/SocialIcons/icon-twitter.png"></img>
+        <img className="icons" src="./images/SocialIcons/icon-youtube.png"></img>
+      </div>
       <div className="footer-links">
         <ul className="Footer-ul">
           <li>
@@ -27,13 +34,7 @@ function Footer() {
         </ul>
       </div>
       <div className="footer-adress"></div>
-      <div className="footer-icons">
-        <img className="icons" src="./images/SocialIcons/icon-insta.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-facebook.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-whatsapp.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-twitter.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-youtube.png"></img>
-      </div>
+     
     </div>
   );
 }
