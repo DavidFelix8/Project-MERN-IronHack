@@ -7,9 +7,6 @@ function Footer() {
       <div className="footer-links">
         <ul className="Footer-ul">
           <li>
-            <a>About us</a>
-          </li>
-          <li>
             <a>Terms and Conditions</a>
           </li>
           <li>

@@ -1,5 +1,6 @@
 .SignIn-SectionMaster {
   margin-top: 5rem;
+  background-color: rgb(231, 229, 229);
 }
 .SignIn-Form {
   display: flex;
@@ -18,4 +19,9 @@
   border: none;
   width: 30%;
   margin: 0 auto;
+  background-color: lightgrey;
+  border-radius: 12%;
+}
+.text {
+  font-size: 1.3rem;
 }

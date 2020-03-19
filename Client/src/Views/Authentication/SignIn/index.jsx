@@ -46,7 +46,7 @@ class AuthenticationSignInView extends Component {
           className="d-flex flex-column"
         >
           <label className="SignIn-Label" htmlFor="email">
-            Email
+            <p className="text">Email</p>
           </label>
           <input
             className="SignIn-Input"
@@ -58,7 +58,7 @@ class AuthenticationSignInView extends Component {
             value={this.state.email}
           />
           <label className="SignIn-Label" htmlFor="password">
-            Password
+            <p className="text">Password</p>
           </label>
           <input
             className="SignIn-Input"

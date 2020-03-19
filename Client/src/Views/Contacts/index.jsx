@@ -65,7 +65,7 @@ class ContactsView extends Component {
             </div>
           </div>
 
-          <input type="submit" value="Submit" />
+          <input className="button-submit" type="submit" value="Submit" />
         </form>
       </div>
     );
