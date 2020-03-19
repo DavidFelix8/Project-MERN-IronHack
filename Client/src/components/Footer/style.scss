@@ -2,8 +2,10 @@
   display: block;
   list-style-type: disc;
   margin-bottom: 0px;
-  margin-block-start: 1em;
-  padding-inline-start: 40px;
+  // margin-block-start: 1em;
+  margin-top: 1em;
+  // padding-inline-start: 40px;
+  padding-left: 40px;
   @media (min-width: 1000px) {
     display: flex;
     justify-content: space-around;

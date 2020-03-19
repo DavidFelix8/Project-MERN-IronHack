@@ -37,7 +37,7 @@ const NavBar = props => {
               </Nav.Link>
               <Nav.Link href="/sign-up">Sign Up</Nav.Link>
               <Nav.Link href="/sign-in" className="Navbar-SignIn">
-                Login In
+                Login
               </Nav.Link>
             </Nav>
           )}

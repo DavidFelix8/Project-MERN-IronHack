@@ -19,9 +19,14 @@ function SubscriptionList(props) {
           />
           <Card.Body className="d-flex flex-column justify-content-between">
             <Card.Title></Card.Title>
-            <Card.Text>Services Included: {props.categories}</Card.Text>
             <Card.Text>
-              <span>Price: {formatPrice(props.price)}</span>
+              <span className="font-weight-bold">Services Included:</span>
+              <span className="d-block">{`${props.categories}`}</span>
+            </Card.Text>
+            <Card.Text>
+              <span>
+                <span className="font-weight-bold">Price:</span> {formatPrice(props.price)}
+              </span>
             </Card.Text>
             <Button variant="primary" onClick={props.handleSubscriptionPurchase}>
               Buy
