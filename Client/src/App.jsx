@@ -56,7 +56,8 @@ class App extends Component {
             <NavBar user={this.state.user} updateUserInformation={this.updateUserInformation} />
             <Switch>
               <Route path="/" exact component={HomeComponent} />
-              {<Route path="/my-account" exact component={PrivateView} />}
+              {/* THIS ROUTE WAS THE PROBLEM, IT WAS RENDERING BEFORE GETTING TO THE ROUTER WITH THE PROPS */}
+              {/* {<Route path="/my-account" exact component={PrivateView} />} */}
               <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
               <Route path="/services" exact component={ServiceListView} />
               <Route path="/contact" exact component={ContactsView} />
@@ -101,6 +102,7 @@ class App extends Component {
                 path="/my-account"
                 render={props => <PrivateView user={this.state.user} {...props} />}
               />
+
               <Route path="/error" component={ErrorView} />
               <Redirect to="/error" />
             </Switch>
