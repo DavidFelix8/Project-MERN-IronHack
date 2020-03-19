@@ -13,6 +13,8 @@ import AuthenticationSignInView from './Views/Authentication/SignIn';
 import HomeComponent from './components/Home';
 import SubscriptionListView from './Views/SubscriptionList';
 import ServiceListView from './Views/ServiceList';
+import ServiceSingleView from './Views/ServiceSingle';
+import CreateBookingView from './Views/CreateBooking';
 import ContactsView from './Views/Contacts';
 import CancelSubscriptionView from './Views/CancelSubscription';
 import ErrorView from './Views/Error';
@@ -60,6 +62,13 @@ class App extends Component {
               {/* {<Route path="/my-account" exact component={PrivateView} />} */}
               <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
               <Route path="/services" exact component={ServiceListView} />
+              <Route path="/service/:id" exact component={ServiceSingleView} />
+              <ProtectedRoute
+                authorized={this.state.user}
+                redirect="/sign-in"
+                path="/service/:id/book"
+                component={CreateBookingView}
+              />
               <Route path="/contact" exact component={ContactsView} />
               <Route path="/subscriptions" exact component={SubscriptionListView} />
               <ProtectedRoute

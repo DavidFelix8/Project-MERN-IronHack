@@ -1,11 +1,16 @@
 .Footer-ul {
   display: block;
   list-style-type: disc;
+  margin-bottom: 0px;
   margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   padding-inline-start: 40px;
+  @media (min-width: 1000px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.Footer-ul li {
+  margin-top: 1rem;
 }
 
 .container-footer {
@@ -15,6 +20,9 @@
 .icons {
   width: 1.5rem;
   height: 1.5rem;
+  @media (min-width: 1000px) {
+    margin-right: 2rem;
+  }
 }
 
 .footer-icons {
@@ -22,4 +30,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 1rem;
+  @media (min-width: 1000px) {
+    margin-left: 7%;
+    justify-content: end;
+  }
 }

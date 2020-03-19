@@ -6,11 +6,11 @@ class MostPopularServicesView extends Component {
     return (
       <section>
         <h1 className="MostPopularServices-Title">Most Popular Services</h1>
-        <div className="d-flex justify-content-around">
+        <div className="MostPopularServces-Div d-flex justify-content-around">
           <picture>
             <img
               className="MostPopularServices-Img"
-              src=".\images\PopularServices\CleaningIcon.jpg"
+              src=".\images\PopularServices\CleaningIcon.png"
               alt="CleaningIcon"
             />
             <h5 className="MostPopularServices-Text">Cleaning</h5>

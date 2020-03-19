@@ -6,10 +6,8 @@ const instance = axios.create({
 
 const list = async () => {
   try {
-    const result = await instance.get('/services');
-    console.log(result);
+    const result = await instance.get('/service/list');
     const services = result.data.services;
-    console.log(services); // /api/services/list
     return services;
   } catch (error) {
     throw error;
@@ -17,7 +15,7 @@ const list = async () => {
 };
 
 const load = async id => {
-  const result = await instance.get(`${id}`);
+  const result = await instance.get(`/service/${id}`);
   const service = result.data.service;
   return service;
 };

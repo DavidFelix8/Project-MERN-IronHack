@@ -1,5 +1,10 @@
 .container-sponsor {
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  @media (min-width: 1000px) {
+    min-height: 40vh;
+  }
 }
 
 .container-row {
@@ -10,4 +15,9 @@
 .img-sponsor {
   height: 7rem;
   width: 6rem;
+  @media (min-width: 1000px) {
+    width: 9rem;
+    height: 8rem;
+    margin-top: 2rem;
+  }
 }

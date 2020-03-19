@@ -14,7 +14,7 @@ class MoreServicesWeOfferView extends Component {
     return (
       <section>
         <h1 className="MoreServicesWeOffer-Title">More Services we offer</h1>
-        <div className="moreserviceoffer">
+        <div className="Moreserviceoffer-div">
           <article>
             <ul>
               <li>
@@ -89,7 +89,7 @@ class MoreServicesWeOfferView extends Component {
             <li key={service._id}>{service.name}</li>
           ))} */}
         </div>
-        <a href="/services">View all Categories</a>
+        <a className="MoreServicesWeOffer-ViewAll" href="/services">View all Categories</a>
       </section>
     );
   }

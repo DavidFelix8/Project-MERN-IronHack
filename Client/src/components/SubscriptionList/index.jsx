@@ -23,7 +23,9 @@ function SubscriptionList(props) {
             <Card.Text>
               <span>Price: {formatPrice(props.price)}</span>
             </Card.Text>
-            <Button variant="primary">Buy</Button>
+            <Button variant="primary" onClick={props.handleSubscriptionPurchase}>
+              Buy
+            </Button>
           </Card.Body>
         </Card>
       </div>

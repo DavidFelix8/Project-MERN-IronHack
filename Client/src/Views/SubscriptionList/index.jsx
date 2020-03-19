@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
 
-import { list } from './../../services/subscription';
+import { list, select as selectSubscription } from './../../services/subscription';
 import SubscriptionsList from '../../components/SubscriptionList';
 
 class SubscriptionListView extends Component {
@@ -11,18 +11,27 @@ class SubscriptionListView extends Component {
       subscriptions: []
     };
     this.fetchData = this.fetchData.bind(this);
+    this.handleSubscriptionPurchase = this.handleSubscriptionPurchase.bind(this);
   }
 
   componentDidMount() {
-    // console.log('Running');
     this.fetchData();
   }
 
   async fetchData() {
     try {
       const subscriptions = await list();
-      // console.log(subscriptions);
       this.setState({ subscriptions });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async handleSubscriptionPurchase(id) {
+    console.log('purchasing subscription ', id);
+    try {
+      const subscription = await selectSubscription(id);
+      console.log('Purchased subscription', subscription);
     } catch (error) {
       console.log(error);
     }
@@ -35,7 +44,11 @@ class SubscriptionListView extends Component {
         {/* <pre>{JSON.stringify(this.state, null, 2)}</pre> */}
         <ul className="SubscriptionView-Ul">
           {subscriptions.map(subscription => (
-            <SubscriptionsList key={subscription._id} {...subscription} />
+            <SubscriptionsList
+              key={subscription._id}
+              {...subscription}
+              handleSubscriptionPurchase={() => this.handleSubscriptionPurchase(subscription._id)}
+            />
           ))}
         </ul>
       </div>

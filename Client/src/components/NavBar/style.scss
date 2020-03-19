@@ -3,11 +3,38 @@
 }
 
 .Navbar-SignOut {
+  display: inline-block;
+  border-radius: 4px;
   border: none;
-  outline: none;
-  border-radius: 10%;
-  background-color: rgb(150, 148, 148);
+  text-align: center;
+  // padding: 1rem;
+  width: 8rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
-.Navbar-SignOut:focus {
-  outline: 0;
+
+.Navbar-SignOut span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.Navbar-SignOut span:after {
+  content: ' \27BE';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Navbar-SignOut:hover span {
+  padding-right: 25px;
+}
+
+.Navbar-SignOut:hover span:after {
+  opacity: 1;
+  right: 0;
 }

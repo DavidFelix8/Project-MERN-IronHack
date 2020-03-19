@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { list } from './../../services/service';
+import { Link } from 'react-router-dom';
 
 import './style.scss';
 
@@ -21,12 +22,22 @@ class ServiceListView extends Component {
   async fetchData() {
     try {
       const services = await list();
-      let categories = [];
-      services.map(service =>
-        categories.indexOf(service.category[0]) < 0 ? categories.push(service.category[0]) : ''
-      );
-      // console.log(categories);
-      this.setState({ services, categories });
+      const categories = services
+        .reduce((accumulator, service) => {
+          const category = service.category;
+          if (accumulator.includes(category)) {
+            return accumulator;
+          } else {
+            return [...accumulator, category];
+          }
+        }, [])
+        .map(category => {
+          return {
+            name: category,
+            services: services.filter(service => service.category === category)
+          };
+        });
+      this.setState({ categories });
     } catch (error) {
       console.log(error);
     }
@@ -39,24 +50,18 @@ class ServiceListView extends Component {
       <div>
         {/* <p>Here is our Service List</p> */}
         <ul>
-          {categories.map(category => {
-            return (
-              <Fragment>
-                <li key={category} className="ServiceList-li-Categories">
-                  {category}
-                </li>
-                <ul className="ServiceList-ul-services">
-                  {services
-                    .filter(service => service.category[0] === category)
-                    .map(serviceInCategory => (
-                      <li className="ServiceList-li-Services" key={serviceInCategory._id}>
-                        ➠{serviceInCategory.name}
-                      </li>
-                    ))}
-                </ul>
-              </Fragment>
-            );
-          })}
+          {categories.map(category => (
+            <li key={category.name} className="ServiceList-li-Categories">
+              <span>{category.name}</span>
+              <ul className="ServiceList-ul-services">
+                {category.services.map(service => (
+                  <li className="ServiceList-li-Services" key={service._id}>
+                    <Link to={`/service/${service._id}`}>{service.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       </div>
     );
