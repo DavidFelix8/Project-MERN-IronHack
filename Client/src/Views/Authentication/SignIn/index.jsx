@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { signIn } from './../../../services/authentication';
-
+import { Button, Form } from 'react-bootstrap';
 import './style.scss';
 
 class AuthenticationSignInView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'John Don',
-      email: 'john@don.com',
-      password: '123456789'
+      name: '',
+      email: '',
+      password: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
@@ -39,39 +39,32 @@ class AuthenticationSignInView extends Component {
 
   render() {
     return (
-      <section className="SignIn-SectionMaster">
-        <form
-          className="SignIn-Form"
-          onSubmit={this.handleFormSubmission}
-          className="d-flex flex-column"
-        >
-          <label className="SignIn-Label" htmlFor="email">
-            <p className="text">Email</p>
-          </label>
-          <input
-            className="SignIn-Input"
-            id="email"
+      <Form className="container-form" onSubmit={this.handleFormSubmission}>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            onChange={this.handleInputChange}
             name="email"
             type="email"
-            placeholder="Email"
-            onChange={this.handleInputChange}
-            value={this.state.email}
+            placeholder="Enter email"
           />
-          <label className="SignIn-Label" htmlFor="password">
-            <p className="text">Password</p>
-          </label>
-          <input
-            className="SignIn-Input"
-            id="password"
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
             name="password"
+            onChange={this.handleInputChange}
             type="password"
             placeholder="Password"
-            onChange={this.handleInputChange}
-            value={this.state.password}
           />
-          <button className="SignIn-btn">Sign In</button>
-        </form>
-      </section>
+        </Form.Group>
+        <Button variant="secondary" type="submit">
+          Submit
+        </Button>
+      </Form>
     );
   }
 }

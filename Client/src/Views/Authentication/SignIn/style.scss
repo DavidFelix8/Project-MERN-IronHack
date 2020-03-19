@@ -1,27 +1,3 @@
-.SignIn-SectionMaster {
-  margin-top: 5rem;
-  background-color: rgb(231, 229, 229);
-}
-.SignIn-Form {
-  display: flex;
-  flex-direction: column;
-}
-.SignIn-Input {
-  border: none;
-  border-bottom: 1px solid #58a4b0;
-  margin: 1rem;
-}
-.SignIn-Label {
-  display: flex;
-  margin-left: 1rem;
-}
-.SignIn-btn {
-  border: none;
-  width: 30%;
-  margin: 0 auto;
-  background-color: lightgrey;
-  border-radius: 12%;
-}
-.text {
-  font-size: 1.3rem;
+.container-form {
+  margin: 5rem 3rem;
 }
