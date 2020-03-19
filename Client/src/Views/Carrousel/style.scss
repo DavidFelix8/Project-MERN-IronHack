@@ -1,6 +1,10 @@
 .Carroussel-Img {
   min-height: 33vh;
   max-height: 33vh;
+  @media (min-width: 850px) {
+    min-height: 63vh;
+    max-height: 63vh;
+  }
   @media (min-width: 1050px) {
     min-height: 93vh;
     max-height: 93vh;

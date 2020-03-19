@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
 
+import './style.scss';
+
 export class CancelSubscriptionView extends Component {
   render() {
     return (
-      <div>
+      <section className="CancelSubs-Section">
         <form action="" className="d-flex flex-column">
-          <label htmlFor="">Why did you decided to Cancel the Subscription?</label>
-          <input type="text" />
-          <label htmlFor="">What can we do to improve?</label>
-          <input type="text" />
+          <label htmlFor="WhyCancel">Why did you decided to Cancel the Subscription?</label>
+          <textarea name="WhyCancel" id="WhyCancel" cols="30" rows="3"></textarea>
+          <label htmlFor="HowImprove">What can we do to improve?</label>
+          <textarea name="HowImprove" id="HowImprove" cols="30" rows="3"></textarea>
           <label htmlFor="">Would you recommend this platform to the people you know?</label>
-          <select id="recommendation">
+          <select className="CancelSubs-Select" id="recommendation">
             <option value="yes">Yes</option>
             <option value="no">No</option>
           </select>
         </form>
-        <div>
-          <h2>Do you really want to cancel?</h2>
+        <article className="CancelSubs-ClickCancel">
+          <h2 class="CancelSubs-Text">Do you really want to cancel?</h2>
           <button>Click Here to Continue</button>
-        </div>
-      </div>
+        </article>
+      </section>
     );
   }
 }
