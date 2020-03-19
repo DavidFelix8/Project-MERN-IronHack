@@ -3,6 +3,9 @@
   min-height: 20vh;
   background-color: #e7e5e5;
   @media (min-width: 1000px) {
+    min-height: 25vh;
+  }
+  @media (min-width: 1200px) {
     min-height: 30vh;
   }
 }
@@ -19,7 +22,12 @@
   margin: 2.5rem auto;
   @media (min-width: 1000px) {
     width: 30%;
-    margin: 4.5rem auto;
+    margin: 6rem auto;
+    padding: 1.5rem;
+  }
+  @media (min-width: 1200px) {
+    width: 30%;
+    margin: 6.5rem auto;
     padding: 2rem;
   }
 }

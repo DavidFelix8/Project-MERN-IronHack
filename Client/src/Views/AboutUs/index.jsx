@@ -6,7 +6,10 @@ function AboutUs() {
     <section className="About_Us-Wave">
       <div className="AboutUs-div-top d-flex flex-column">
         <h1 className="About_Us-Title">Who are we?</h1>
-        <h5 className="About_Us-Text-First">We are the ones that will make your life easier...</h5>
+        <h5 className="About_Us-Text-First">
+          We are the ones that will make your life easier...
+          <span className="AboutUs-Span-SubsPack">Take care of yourself, Ease the service !!!</span>
+        </h5>
       </div>
       <div className="d-flex flex-column">
         <h1 className="About_Us-Title Title-Second">What are we?</h1>

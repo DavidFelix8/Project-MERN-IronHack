@@ -2,6 +2,25 @@
   outline: none;
 }
 
+@media (min-width: 992px) {
+  #responsive-navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .Navbar-Inner {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+  }
+  .Navbar-SignIn {
+    margin: 0 0.5rem;
+    background-color: rgb(0, 0, 0);
+  }
+  .Navbar-Contact {
+    margin-right: 2rem;
+  }
+}
+
 .Navbar-SignOut {
   display: inline-block;
   border-radius: 4px;
