@@ -31,8 +31,14 @@ const NavBar = props => {
             </Nav>
           )) || (
             <Nav>
-              <Nav.Link href="/sign-in">Sign In</Nav.Link>
+              <Nav.Link href="/services">Services</Nav.Link>
+              <Nav.Link href="/contact" className="Navbar-Contact">
+                Contact
+              </Nav.Link>
               <Nav.Link href="/sign-up">Sign Up</Nav.Link>
+              <Nav.Link href="/sign-in" className="Navbar-SignIn">
+                Login In
+              </Nav.Link>
             </Nav>
           )}
         </Navbar.Collapse>
