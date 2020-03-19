@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.scss';
+import { Card, Button } from 'react-bootstrap';
+
 import { Link } from 'react-router-dom';
 import { load as loadService } from './../../services/service';
 
@@ -30,12 +32,20 @@ class PackageSingleView extends Component {
   render() {
     const service = this.state.service;
     return (
-      <div>
+      <div className="card-container">
         {service && (
-          <div>
-            <h1>{service.name}</h1>
-            <Link to={`/service/${service._id}/book`}>Book Service</Link>
-          </div>
+          <Card style={{ width: '20rem' }}>
+            <Card.Img variant="top" src={service.image} />
+            <Card.Body>
+              <Card.Title>{service.name}</Card.Title>
+              <Card.Text>{service.description}</Card.Text>
+              <Button variant="secondary">
+                <Link to={`/service/${service._id}/book`} variant="primary">
+                  Book a Service
+                </Link>
+              </Button>
+            </Card.Body>
+          </Card>
         )}
       </div>
     );
