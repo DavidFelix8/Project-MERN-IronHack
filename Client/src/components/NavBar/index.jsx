@@ -17,7 +17,7 @@ const NavBar = props => {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="/">Nome da APP</Navbar.Brand>
+        <Navbar.Brand href="/">U pay WE do</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           {(props.user && (
