@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { signUp } from './../../../services/authentication';
+import { Form, Button } from 'react-bootstrap';
 
 import './style.scss';
 
@@ -7,9 +8,9 @@ class AuthenticationSignUpView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'John Don',
-      email: 'john@don.com',
-      password: '123456789'
+      name: '',
+      email: '',
+      password: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
@@ -41,44 +42,47 @@ class AuthenticationSignUpView extends Component {
 
   render() {
     return (
-      <section className="SignUp-SectionMaster">
-        <form className="SignUp-Form" onSubmit={this.handleFormSubmission} className="d-flex flex-column">
-          <label className="SignUp-Label" htmlFor="name">Name</label>
-          <input
-          className="SignUp-Input"
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Name"
+      <Form className="container-form" onSubmit={this.handleFormSubmission}>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
             onChange={this.handleInputChange}
+            name="name"
+            type="name"
+            placeholder="Enter your name"
             value={this.state.name}
           />
-          <label className="SignUp-Label" htmlFor="email">Email</label>
-          <input
-          className="SignUp-Input"
-            id="email"
+        </Form.Group>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            onChange={this.handleInputChange}
             name="email"
             type="email"
-            placeholder="Email"
-            onChange={this.handleInputChange}
+            placeholder="Enter email"
             value={this.state.email}
           />
-          <label className="SignUp-Label" htmlFor="password">Password</label>
-          <input
-          className="SignUp-Input"
-            id="password"
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
             name="password"
+            onChange={this.handleInputChange}
             type="password"
             placeholder="Password"
-            onChange={this.handleInputChange}
             value={this.state.password}
           />
           {this.state.password && this.state.password.length < 8 && (
             <small className="SignUp-PassShort">Password is too short!</small>
           )}
-          <button className="SignUp-btn" disabled={this.state.password.length < 8}>Sign Up</button>
-        </form>
-      </section>
+        </Form.Group>
+        <Button variant="secondary" type="submit" disabled={this.state.password.length < 8}>
+          Submit
+        </Button>
+      </Form>
     );
   }
 }
