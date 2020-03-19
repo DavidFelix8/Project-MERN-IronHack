@@ -15,6 +15,7 @@ const indexRouter = require('./routes/index');
 const authenticationRouter = require('./routes/authentication');
 const subscriptionRouter = require('./routes/subscription');
 const servicesRouter = require('./routes/services');
+const bookingsRouter = require('./routes/booking');
 const faqRouter = require('./routes/faq');
 
 const app = express();
@@ -46,7 +47,8 @@ app.use(bindUserToViewLocals);
 app.use('/', indexRouter);
 app.use('/api/authentication', authenticationRouter);
 app.use('/api/subscription', subscriptionRouter);
-app.use('/api/services', servicesRouter);
+app.use('/api/service', servicesRouter);
+app.use('/api/booking', bookingsRouter);
 app.use('/api/faq', faqRouter);
 
 // Catch missing routes and forward to error handler

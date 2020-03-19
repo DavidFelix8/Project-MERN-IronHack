@@ -1,40 +1,11 @@
-.CancelSubs-Section {
-  font-size: 0.8rem;
-  padding: 1rem;
-  @media (min-width: 1000px) {
-    font-size: 1rem;
-  }
+.container-cancel {
+  margin: 5% 10%;
 }
 
-.CancelSubs-Section label {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 3rem;
+.form-text {
+  margin-top: 4rem;
 }
 
-.CancelSubs-Section textarea {
-  @media (min-width: 1000px) {
-    width: 50%;
-  }
-}
-
-.CancelSubs-ClickCancel {
-  font-size: 1rem;
-  margin-top: 3rem;
-}
-
-.CancelSubs-Select {
-  width: 40%;
-  margin: 0 auto;
-  @media (min-width: 1000px) {
-    width: 20%;
-    margin: 0;
-  }
-}
-
-.CancelSubs-Text {
-  font-size: 1rem;
-  @media (min-width: 1000px) {
-    font-size: 1.5rem;
-  }
+.form-btn {
+  margin-top: 2rem;
 }

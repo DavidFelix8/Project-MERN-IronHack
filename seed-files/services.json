@@ -1,0 +1,47 @@
+{ "name": "Fitness Trainer", "description": "", "category": "Health and Fitness" }
+{ "name": "Yoga Trainer", "description": "", "category": "Health and Fitness" }
+{ "name": "Doctor at Home", "description": "", "category": "Health and Fitness" }
+{ "name": "Parental Care", "description": "", "category": "Health and Fitness" }
+{ "name": "Deep House Wash", "description": "", "category": "Cleaning" }
+{ "name": "Sofa Wash", "description": "", "category": "Cleaning" }
+{ "name": "Carpet Wash", "description": "", "category": "Cleaning" }
+{ "name": "Car Wash", "description": "", "category": "Cleaning" }
+{ "name": "Printer", "description": "", "category": "Electronic Repair" }
+{ "name": "Mobile", "description": "", "category": "Electronic Repair" }
+{ "name": "Printer", "description": "", "category": "Electronic Repair" }
+{ "name": "Laptop", "description": "", "category": "Electronic Repair" }
+{ "name": "Tablet", "description": "", "category": "Electronic Repair" }
+{ "name": "Desktop", "description": "", "category": "Electronic Repair" }
+{ "name": "CCTV", "description": "", "category": "Electronic Repair" }
+{ "name": "Wash and Fold", "description": "", "category": "Laundry" }
+{ "name": "Shoe Wash", "description": "", "category": "Laundry" }
+{ "name": "Steam wash", "description": "", "category": "Laundry" }
+{ "name": "Dry Cleaning", "description": "", "category": "Laundry" }
+{ "name": "Carpet Wash", "description": "", "category": "Laundry" }
+{ "name": "Curtain Wash", "description": "", "category": "Laundry" }
+{ "name": "Accessories Wash", lorem "description": "", "category": "Laundry" }
+{ "name": "AC Service", "description": "", "category": "Home Maintenance" }
+{ "name": "Electrician", "description": "", "category": "Home Maintenance" }
+{ "name": "Plumber", "description": "", "category": "Home Maintenance" }
+{ "name": "Pest Control", "description": "", "category": "Home Maintenance" }
+{ "name": "Painter", "description": "", "category": "Home Maintenance" }
+{ "name": "Fridge Repair", "description": "", "category": "Home Appliance Repairs" }
+{ "name": "TV Repair", "description": "", "category": "Home Appliance Repairs" }
+{ "name": "Washing Machine Repair", "description": "", "category": "Home Appliance Repairs" }
+{ "name": "Oven Repair", "description": "", "category": "Home Appliance Repairs" }
+{ "name": "Gas Stove Repair", "description": "", "category": "Home Appliance Repairs" }
+{ "name": "Insurance", "description": "", "category": "Business" }
+{ "name": "Business Setup", "description": "", "category": "Business" }
+{ "name": "Lawer", "description": "", "category": "Business" }
+{ "name": "Detective Agency", "description": "", "category": "Business" }
+{ "name": "Background Verification", "description": "", "category": "Business" }
+{ "name": "Accounting", "description": "", "category": "Business" }
+{ "name": "After Party Cleaner", "description": "", "category": "Events and parties" }
+{ "name": "Event Photo Shoot", "description": "", "category": "Events and parties" }
+{ "name": "Cake", "description": "", "category": "Events and parties" }
+{ "name": "Surprise Gift", "description": "", "category": "Events and parties" }
+{ "name": "Flower Arrangement", "description": "", "category": "Events and parties" }
+{ "name": "Event Planning", "description": "", "category": "Events and parties" }
+{ "name": "Driver", "description": "", "category": "Delivery" }
+{ "name": "Packers and Movers", "description": "", "category": "Delivery" }
+{ "name": "Food", "description": "", "category": "Delivery" }

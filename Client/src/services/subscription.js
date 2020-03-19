@@ -6,13 +6,19 @@ const instance = axios.create({
 
 const list = async () => {
   try {
-    const result = await instance.get('/subscription');
+    const result = await instance.get('/subscription/list');
     console.log(result);
-    const subscriptions = result.data.subscription;
+    const subscriptions = result.data.subscriptions;
     return subscriptions;
   } catch (error) {
     throw error;
   }
+};
+
+const select = async id => {
+  const result = await instance.post(`/subscription/${id}/select`);
+  const subscription = result.data.subscription;
+  return subscription;
 };
 
 const load = async id => {
@@ -21,4 +27,4 @@ const load = async id => {
   return subscription;
 };
 
-export { list, load };
+export { list, load, select };
