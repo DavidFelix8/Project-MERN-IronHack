@@ -10,10 +10,10 @@ class PrivateView extends Component {
     //User Undefined
     return (
       <div>
-        <div>
+        {/* <div>
           <h1>{user.name}</h1>
           <span>{user.email}</span>
-        </div>
+        </div> */}
         <section id="d-flex flex-column">
           <div className="MyAccount-Subs">
             <h2 className="MyAccount-Text">Your Subscription Includes:</h2> 
