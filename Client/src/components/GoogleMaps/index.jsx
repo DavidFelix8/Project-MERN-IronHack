@@ -11,8 +11,6 @@ class Map extends Component {
     this.state = {
       address: '',
       city: '',
-      area: '',
-      state: '',
       mapPosition: {
         lat: this.props.center.lat,
         lng: this.props.center.lng
@@ -31,17 +29,13 @@ class Map extends Component {
       response => {
         const address = response.results[0].formatted_address,
           addressArray = response.results[0].address_components,
-          city = this.getCity(addressArray),
-          area = this.getArea(addressArray),
-          state = this.getState(addressArray);
+          city = this.getCity(addressArray);
 
-        console.log('city', city, area, state);
+        console.log('city', city /*  area, state */);
 
         this.setState({
           address: address ? address : '',
-          area: area ? area : '',
-          city: city ? city : '',
-          state: state ? state : ''
+          city: city ? city : ''
         });
       },
       error => {
@@ -57,9 +51,7 @@ class Map extends Component {
     if (
       this.state.markerPosition.lat !== this.props.center.lat ||
       this.state.address !== nextState.address ||
-      this.state.city !== nextState.city ||
-      this.state.area !== nextState.area ||
-      this.state.state !== nextState.state
+      this.state.city !== nextState.city
     ) {
       return true;
     } else if (this.props.center.lat === nextProps.center.lat) {
@@ -79,28 +71,7 @@ class Map extends Component {
       }
     }
   };
-  /**
-   * Get the area and set the area input value to the one selected
-   *
-   * @param addressArray
-   * @return {string}
-   */
-  getArea = addressArray => {
-    let area = '';
-    for (let i = 0; i < addressArray.length; i++) {
-      if (addressArray[i].types[0]) {
-        for (let j = 0; j < addressArray[i].types.length; j++) {
-          if (
-            'sublocality_level_1' === addressArray[i].types[j] ||
-            'locality' === addressArray[i].types[j]
-          ) {
-            area = addressArray[i].long_name;
-            return area;
-          }
-        }
-      }
-    }
-  };
+
   /**
    * Get the address and set the address input value to the one selected
    *
@@ -150,14 +121,12 @@ class Map extends Component {
       response => {
         const address = response.results[0].formatted_address,
           addressArray = response.results[0].address_components,
-          city = this.getCity(addressArray),
-          area = this.getArea(addressArray),
-          state = this.getState(addressArray);
+          city = this.getCity(addressArray);
         this.setState({
           address: address ? address : '',
-          area: area ? area : '',
+
           city: city ? city : '',
-          state: state ? state : '',
+
           markerPosition: {
             lat: newLat,
             lng: newLng
@@ -183,16 +152,12 @@ class Map extends Component {
     const address = place.formatted_address,
       addressArray = place.address_components,
       city = this.getCity(addressArray),
-      area = this.getArea(addressArray),
-      state = this.getState(addressArray),
       latValue = place.geometry.location.lat(),
       lngValue = place.geometry.location.lng();
     // Set these values in the state.
     this.setState({
       address: address ? address : '',
-      area: area ? area : '',
       city: city ? city : '',
-      state: state ? state : '',
       markerPosition: {
         lat: latValue,
         lng: lngValue
@@ -262,28 +227,6 @@ class Map extends Component {
                 onChange={this.onChange}
                 readOnly="readOnly"
                 value={this.state.city}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="">Area</label>
-              <input
-                type="text"
-                name="area"
-                className="form-control"
-                onChange={this.onChange}
-                readOnly="readOnly"
-                value={this.state.area}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="">State</label>
-              <input
-                type="text"
-                name="state"
-                className="form-control"
-                onChange={this.onChange}
-                readOnly="readOnly"
-                value={this.state.state}
               />
             </div>
             <div className="form-group">
