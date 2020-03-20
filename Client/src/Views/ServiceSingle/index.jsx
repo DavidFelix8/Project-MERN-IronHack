@@ -40,8 +40,8 @@ class PackageSingleView extends Component {
               <Card.Title>{service.name}</Card.Title>
               <Card.Text>{service.description}</Card.Text>
               <Button variant="secondary">
-                <Link to={`/service/${service._id}/book`} variant="primary">
-                  Book a Service
+                <Link className="btn-title" to={`/service/${service._id}/book`} variant="primary">
+                  <p>Book a Service</p>
                 </Link>
               </Button>
             </Card.Body>
