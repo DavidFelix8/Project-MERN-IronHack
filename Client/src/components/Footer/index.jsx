@@ -5,11 +5,11 @@ function Footer() {
   return (
     <div className="container-footer">
       <div className="footer-icons">
-        <img className="icons" src="./images/SocialIcons/icon-insta.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-facebook.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-whatsapp.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-twitter.png"></img>
-        <img className="icons" src="./images/SocialIcons/icon-youtube.png"></img>
+        <img className="icons" src="./images/SocialIcons/icon-insta.png" alt="img-icons"></img>
+        <img className="icons" src="./images/SocialIcons/icon-facebook.png" alt="img-icons"></img>
+        <img className="icons" src="./images/SocialIcons/icon-whatsapp.png" alt="img-icons"></img>
+        <img className="icons" src="./images/SocialIcons/icon-twitter.png" alt="img-icons"></img>
+        <img className="icons" src="./images/SocialIcons/icon-youtube.png" alt="img-icons"></img>
       </div>
       <div className="footer-links">
         <ul className="Footer-ul">
@@ -17,7 +17,7 @@ function Footer() {
             <a href="/termsandconditions">Terms and Conditions</a>
           </li>
           <li>
-            <a>FAQ</a>
+            <a href="/">FAQ</a>
           </li>
           <li>
             <a href="/Services">Services</a>
@@ -29,7 +29,7 @@ function Footer() {
             <a href="/contact">Contacts</a>
           </li>
           <li>
-            <a>Cancellation Policy</a>
+            <a href="/">Cancellation Policy</a>
           </li>
         </ul>
       </div>
