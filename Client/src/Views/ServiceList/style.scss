@@ -1,51 +1,26 @@
-@media (max-width: 325px) {
-  .ServiceList-li-Categories {
-    font-size: 1rem;
-  }
-  .ServiceList-li-Services {
-    flex: 1 0 100%;
-  }
+.ServiceList-ul-services {
+  text-align: center;
+  margin: 3rem;
 }
 
 .ServiceList-li-Categories {
-  display: flex;
-  font-weight: bold;
-  padding: 2rem;
+  text-align: center;
 }
 
-.ServiceList-ul-services {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 1rem;
+.container-ul {
+  padding: 3rem;
+  background-color: rgb(238, 238, 238);
 }
 
-.ServiceList-li-Services {
-  flex: 1 0 50%;
-  box-sizing: border-box;
+.service-link {
+  text-decoration: none;
+  font-style: normal;
+}
+.service-link:hover {
+  background-color: lightgrey;
 }
 
-@media (min-width: 550px) {
-  .ServiceList-li-Categories {
-    font-size: 1.4rem;
-  }
-  .ServiceList-li-Services {
-    flex: 1 0 30%;
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 700px) {
-  .ServiceList-li-Categories {
-    font-size: 2rem;
-  }
-  .ServiceList-li-Services {
-    flex: 1 0 30%;
-    font-size: 1.2rem;
-  }
-}
-
-@media (min-width: 1000px) {
-  .ServiceList-li-Services {
-    flex: 1 0 25%;
-  }
+.container-list {
+  text-align: center;
+  margin: 3rem 0;
 }

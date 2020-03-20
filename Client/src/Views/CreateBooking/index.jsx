@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.scss';
-
+import { Button } from 'react-bootstrap';
 import { create as createBooking } from './../../services/booking';
 
 class PackageSingleView extends Component {
@@ -43,11 +43,13 @@ class PackageSingleView extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Create Booking</h3>
-        <form onSubmit={this.handleFormSubmission}>
+      <div className="container-booking">
+        <h3>Book your Service</h3>
+        <form className="form-container" onSubmit={this.handleFormSubmission}>
           <input type="date" value={this.state.date} onChange={this.handleDateInputChange} />
-          <button>Create Booking</button>
+          <div className="btn-container">
+            <Button variant="outline-secondary">Create Booking</Button>
+          </div>
         </form>
       </div>
     );

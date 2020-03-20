@@ -1,3 +1,31 @@
-{ "title": "Base", "categories": ["Home Maintenance", "Home Appliance Repairs", "Cleaning"], "price": { "amount": 3000, "currency": "EUR" } }
-  { "title": "Premium", "categories": [ "Home Maintenance", "Home Appliance Repairs", "Cleaning", "Electronic Repair", "Health and Fitness" ], "price": { "amount": 6000, "currency": "EUR" } }
-  { "title": "Star", "categories": [ "Home Maintenance", "Home Appliance Repairs", "Cleaning", "Electronic Repair", "Health and Fitness", "Laundry", "Business", "Events and Parties", "Delivery" ], "price": { "amount": 10000, "currency": "EUR" } }
+({
+  "title": "Base",
+  "categories": ["Home Maintenance", "Home Appliance Repairs", "Cleaning"],
+  "price": { "amount": 3000, "currency": "EUR" }
+},
+{
+  "title": "Premium",
+  "categories": [
+    "Home Maintenance",
+    "Home Appliance Repairs",
+    "Cleaning",
+    "Electronic Repair",
+    "Health and Fitness"
+  ],
+  "price": { "amount": 6000, "currency": "EUR" }
+},
+{
+  "title": "Star",
+  "categories": [
+    "Home Maintenance",
+    "Home Appliance Repairs",
+    "Cleaning",
+    "Electronic Repair",
+    "Health and Fitness",
+    "Laundry",
+    "Business",
+    "Events and Parties",
+    "Delivery"
+  ],
+  "price": { "amount": 10000, "currency": "EUR" }
+})

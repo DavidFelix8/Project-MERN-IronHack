@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { list } from './../../services/service';
 import { Link } from 'react-router-dom';
+import { ListGroup } from 'react-bootstrap';
 
 import './style.scss';
 
@@ -48,18 +49,19 @@ class ServiceListView extends Component {
     const categories = this.state.categories;
     return (
       <div>
-        {/* <p>Here is our Service List</p> */}
-        <ul>
+        <ul className="container-ul">
           {categories.map(category => (
             <li key={category.name} className="ServiceList-li-Categories">
-              <span>{category.name}</span>
-              <ul className="ServiceList-ul-services">
+              <h3>{category.name}</h3>
+              <ListGroup className="container-list grow" as="ul">
                 {category.services.map(service => (
-                  <li className="ServiceList-li-Services" key={service._id}>
-                    <Link to={`/service/${service._id}`}>{service.name}</Link>
-                  </li>
+                  <ListGroup.Item as="li">
+                    <Link className="service-link" to={`/service/${service._id}`}>
+                      {service.name}
+                    </Link>
+                  </ListGroup.Item>
                 ))}
-              </ul>
+              </ListGroup>
             </li>
           ))}
         </ul>
