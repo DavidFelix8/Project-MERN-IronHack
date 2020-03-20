@@ -21,10 +21,10 @@ class PrivateView extends Component {
   }
 
   async getSubscription() {
-    console.log('getting subscription', this.props.user.subscription);
+    // console.log('getting subscription', this.props.user.subscription);
     try {
       const sub = await find(this.props.user.subscription);
-      console.log('sub', sub.sub);
+      // console.log('sub', sub.sub);
       this.setState({
         subscription: sub.sub
       });
@@ -36,7 +36,7 @@ class PrivateView extends Component {
   render() {
     const user = this.props.user;
     const service = this.props.service;
-    console.log('subscrition state', this.state.subscription);
+    // console.log('subscrition state', this.state.subscription);
     // console.log(user);
     //User Undefined
     return (

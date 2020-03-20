@@ -7,7 +7,7 @@ const instance = axios.create({
 const list = async () => {
   try {
     const result = await instance.get('/subscription/list');
-    console.log(result);
+    // console.log(result);
     const subscriptions = result.data.subscriptions;
     return subscriptions;
   } catch (error) {
@@ -16,16 +16,16 @@ const list = async () => {
 };
 
 const select = async id => {
-  console.log('at the select service', id);
+  // console.log('at the select service', id);
   const result = await instance.post(`/subscription/${id}/select`);
-  console.log('retrived from service', result.data);
+  // console.log('retrived from service', result.data);
   return result.data;
 };
 
 const find = async id => {
-  console.log('at the select service', id);
+  // console.log('at the select service', id);
   const result = await instance.get(`/subscription/find/${id}`);
-  console.log('retrived from service', result.data);
+  // console.log('retrived from service', result.data);
   return result.data;
 };
 

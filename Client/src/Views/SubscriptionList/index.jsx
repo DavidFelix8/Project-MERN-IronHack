@@ -28,14 +28,15 @@ class SubscriptionListView extends Component {
   }
 
   async handleSubscriptionPurchase(id) {
-    console.log('purchasing subscription ', id);
+    // console.log('purchasing subscription ', id);
     try {
       const subscription = await selectSubscription(id);
-      console.log('Purchased subscription', subscription);
+      // console.log('Purchased subscription', subscription);
     } catch (error) {
       console.log(error);
     }
   }
+
 
   render() {
     const subscriptions = this.state.subscriptions;
