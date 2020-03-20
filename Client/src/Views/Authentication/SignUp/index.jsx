@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { signUp } from './../../../services/authentication';
 import { Form, Button } from 'react-bootstrap';
+import Map from './../../../components/GoogleMaps';
 
 import './style.scss';
 
@@ -62,7 +63,7 @@ class AuthenticationSignUpView extends Component {
             placeholder="Enter email"
             value={this.state.email}
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="text-muted" id="SignUp-Text">
             We'll never share your email with anyone else.
           </Form.Text>
         </Form.Group>
@@ -79,7 +80,21 @@ class AuthenticationSignUpView extends Component {
             <small className="SignUp-PassShort">Password is too short!</small>
           )}
         </Form.Group>
-        <Button variant="secondary" type="submit" disabled={this.state.password.length < 8}>
+
+        <Map
+          className="mb-4"
+          google={this.props.google}
+          center={{ lat: 38.71667, lng: -9.13333 }}
+          height="300px"
+          zoom={15}
+        />
+
+        <Button
+          variant="secondary"
+          type="submit"
+          className="Sign-Up-btn-Submit"
+          disabled={this.state.password.length < 8}
+        >
           Submit
         </Button>
       </Form>
