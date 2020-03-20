@@ -4,7 +4,7 @@ import './style.scss';
 function Footer() {
   return (
     <div className="container-footer">
-       <div className="footer-icons">
+      <div className="footer-icons">
         <img className="icons" src="./images/SocialIcons/icon-insta.png"></img>
         <img className="icons" src="./images/SocialIcons/icon-facebook.png"></img>
         <img className="icons" src="./images/SocialIcons/icon-whatsapp.png"></img>
@@ -14,7 +14,7 @@ function Footer() {
       <div className="footer-links">
         <ul className="Footer-ul">
           <li>
-            <a>Terms and Conditions</a>
+            <a href="/termsandconditions">Terms and Conditions</a>
           </li>
           <li>
             <a>FAQ</a>
@@ -34,7 +34,6 @@ function Footer() {
         </ul>
       </div>
       <div className="footer-adress"></div>
-     
     </div>
   );
 }

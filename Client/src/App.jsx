@@ -18,6 +18,7 @@ import CreateBookingView from './Views/CreateBooking';
 import ContactsView from './Views/Contacts';
 import CancelSubscriptionView from './Views/CancelSubscription';
 import ErrorView from './Views/Error';
+import TermsAndConditions from './Views/TermsAndConditions';
 
 import { loadUserInformation } from './services/authentication';
 
@@ -70,6 +71,7 @@ class App extends Component {
                 component={CreateBookingView}
               />
               <Route path="/contact" exact component={ContactsView} />
+              <Route path="/termsandconditions" exact component={TermsAndConditions} />
               <Route path="/subscriptions" exact component={SubscriptionListView} />
               <ProtectedRoute
                 path="/sign-up"
