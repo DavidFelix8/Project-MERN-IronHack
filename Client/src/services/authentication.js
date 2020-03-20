@@ -52,7 +52,7 @@ const editUserInformation = async data => {
   form.append('name', data.name);
   form.append('email', data.email);
   form.append('subscription', data.subscription);
-  const result = await instance.patch('/user-information', form);
+  const result = await instance.patch('/my-account', form);
   const user = result.data.user;
   return user;
 };

@@ -52,7 +52,7 @@ class ServiceListView extends Component {
         <ul className="container-ul">
           {categories.map(category => (
             <li key={category.name} className="ServiceList-li-Categories">
-              <h3>{category.name}</h3>
+              <h3 className="category">{category.name}</h3>
               <ListGroup className="container-list grow" as="ul">
                 {category.services.map(service => (
                   <ListGroup.Item as="li">

@@ -13,7 +13,7 @@ class PrivateEditView extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
-    this.handleFileInputChange = this.handleFileInputChange.bind(this);
+    //this.handleFileInputChange = this.handleFileInputChange.bind(this);
   }
 
   componentDidMount() {
@@ -35,19 +35,19 @@ class PrivateEditView extends Component {
         subscription
       });
       this.props.updateUserInformation(user);
-      this.props.history.push('/my-account');
+      this.props.history.push('/private');
     } catch (error) {
       console.log(error);
     }
   }
 
-  handleFileInputChange(event) {
+  /*handleFileInputChange(event) {
     console.dir(event.target);
     const { name, files } = event.target;
     this.setState({
       [name]: files[0]
     });
-  }
+  }*/
 
   handleInputChange(event) {
     const { value, name } = event.target;
@@ -88,7 +88,9 @@ class PrivateEditView extends Component {
             value={this.state.email}
           />
 
-          <button className="PrivateEdit-btn-Update">Update Profile</button>
+          <button className="PrivateEdit-btn-Update" variant="outline-secondary">
+            Update Profile
+          </button>
           <div className="PrivateEdit-Subs">
             <a className="PrivateEdit-changeSubs" href="/subscriptions">
               Change Subscription Type
