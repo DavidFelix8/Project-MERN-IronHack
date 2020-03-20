@@ -85,8 +85,8 @@ class AuthenticationSignUpView extends Component {
           className="mb-4"
           google={this.props.google}
           center={{ lat: 38.71667, lng: -9.13333 }}
-          height="300px"
-          zoom={15}
+          height="30vh"
+          zoom={13}
         />
 
         <Button
