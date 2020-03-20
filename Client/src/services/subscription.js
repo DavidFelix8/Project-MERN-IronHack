@@ -16,9 +16,17 @@ const list = async () => {
 };
 
 const select = async id => {
+  console.log('at the select service', id);
   const result = await instance.post(`/subscription/${id}/select`);
-  const subscription = result.data.subscription;
-  return subscription;
+  console.log('retrived from service', result.data);
+  return result.data;
+};
+
+const find = async id => {
+  console.log('at the select service', id);
+  const result = await instance.get(`/subscription/find/${id}`);
+  console.log('retrived from service', result.data);
+  return result.data;
 };
 
 const load = async id => {
@@ -27,4 +35,4 @@ const load = async id => {
   return subscription;
 };
 
-export { list, load, select };
+export { list, load, select, find };

@@ -16,8 +16,12 @@ router.post('/create-subscription', async (req, res, next) => {
   };
   console.log(subscriptionObj);
   try {
-    const newSubscription = await Subscription.create(subscriptionObj);
-    res.json({ newSubscription });
+    const newSubscription = await Subscription.create(subscriptionObj).then(newSubscription => {
+      User.findByIdAndUpdate(req.user._id, { Subscription: newSubscription._id }).then(user => {
+        console.log(user);
+      });
+      res.json({ newSubscription });
+    });
   } catch (error) {
     next(error);
   }
