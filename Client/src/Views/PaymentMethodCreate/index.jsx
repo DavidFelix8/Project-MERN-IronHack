@@ -12,7 +12,6 @@ class PaymentMethodCreateView extends Component {
     super(props);
     this.state = {};
     this.handleFormSubmission = this.handleFormSubmission.bind(this);
-
     this.stripePromise = loadStripe(STRIPE_PUBLIC_KEY);
   }
 
@@ -37,6 +36,7 @@ class PaymentMethodCreateView extends Component {
       this.props.history.push('/payment-method/list');
     }
   }
+  
   render() {
     const STRIPE_ELEMENT_OPTIONS = {
       style: {
