@@ -5,7 +5,7 @@ import './style.scss';
 
 import { create as paymentMethodCreate } from '../../services/payment-method';
 
-const STRIPE_PUBLIC_KEY = 'sghshdfghdrhweabdfnjy65';
+const STRIPE_PUBLIC_KEY = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
 
 class PaymentMethodCreateView extends Component {
   constructor(props) {
