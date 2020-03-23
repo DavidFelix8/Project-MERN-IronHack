@@ -19,6 +19,7 @@ router.get('/list', async (req, res, next) => {
 });
 
 router.post('/create', async (req, res, next) => {
+  console.log('im being called');
   const { token } = req.body;
   try {
     const method = await stripe.paymentMethods.attach(token, {

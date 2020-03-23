@@ -1,4 +1,4 @@
 const stripe = require('stripe');
-const stripeInstance = stripe(process.env.STRIPE_SECRET_KEY);
+const stripeInstance = stripe(process.env.STRIPE_SECRET);
 
 module.exports = stripeInstance;
