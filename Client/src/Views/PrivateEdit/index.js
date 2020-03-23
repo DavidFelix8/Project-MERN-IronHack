@@ -35,7 +35,7 @@ class PrivateEditView extends Component {
         subscription
       });
       this.props.updateUserInformation(user);
-      this.props.history.push('/private');
+      this.props.history.push('/my-account');
     } catch (error) {
       console.log(error);
     }
@@ -47,7 +47,9 @@ class PrivateEditView extends Component {
     this.setState({
       [name]: files[0]
     });
-  }*/
+  }
+  
+*/
 
   handleInputChange(event) {
     const { value, name } = event.target;

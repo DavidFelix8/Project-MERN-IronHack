@@ -10,7 +10,7 @@ const schema = new mongoose.Schema({
   categories: [
     {
       /* type: mongoose.Schema.Types.ObjectId,
-      ref: 'Service' */
+      ref: 'Subscription' */
       type: String
     }
   ],

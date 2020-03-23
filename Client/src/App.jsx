@@ -18,6 +18,10 @@ import CreateBookingView from './Views/CreateBooking';
 import ContactsView from './Views/Contacts';
 import CancelSubscriptionView from './Views/CancelSubscription';
 import ErrorView from './Views/Error';
+import CheckoutView from './Views/CheckoutView';
+
+import PaymentMethodListView from './Views/PaymentMethodList';
+import PaymentMethodCreateView from './Views/PaymentMethodCreate';
 import TermsAndConditions from './Views/TermsAndConditions';
 
 import { loadUserInformation } from './services/authentication';
@@ -27,9 +31,11 @@ class App extends Component {
     super();
     this.state = {
       loaded: false,
-      user: null
+      user: null,
+      card: []
     };
     this.updateUserInformation = this.updateUserInformation.bind(this);
+    this.updateCart = this.updateCart.bind(this);
   }
 
   componentDidMount() {
@@ -51,12 +57,22 @@ class App extends Component {
     });
   }
 
+  updateCart(item) {
+    this.setState(previousState => ({
+      cart: [...previousState.cart, item]
+    }));
+  }
+
   render() {
     return (
       <div className="App">
         {(this.state.loaded && (
           <BrowserRouter>
-            <NavBar user={this.state.user} updateUserInformation={this.updateUserInformation} />
+            <NavBar
+              user={this.state.user}
+              cart={this.state.cart}
+              updateUserInformation={this.updateUserInformation}
+            />
             <Switch>
               <Route path="/" exact component={HomeComponent} />
               {/* THIS ROUTE WAS THE PROBLEM, IT WAS RENDERING BEFORE GETTING TO THE ROUTER WITH THE PROPS */}
@@ -64,6 +80,12 @@ class App extends Component {
               <Route path="/cancel-subscription" exact component={CancelSubscriptionView} />
               <Route path="/services" exact component={ServiceListView} />
               <Route path="/service/:id" exact component={ServiceSingleView} />
+
+              <Route
+                path="/subscriptions"
+                render={props => <SubscriptionListView updateCart={this.updateCart} {...props} />}
+              />
+
               <ProtectedRoute
                 authorized={this.state.user}
                 redirect="/sign-in"
@@ -72,7 +94,12 @@ class App extends Component {
               />
               <Route path="/contact" exact component={ContactsView} />
               <Route path="/termsandconditions" exact component={TermsAndConditions} />
-              <Route path="/subscriptions" exact component={SubscriptionListView} />
+              <ProtectedRoute
+                path="/checkout"
+                render={props => <CheckoutView cart={this.state.cart} {...props} />}
+                authorized={this.state.user}
+                redirect={'/sign-in'}
+              />
               <ProtectedRoute
                 path="/sign-up"
                 authorized={!this.state.user}
@@ -112,6 +139,18 @@ class App extends Component {
                 redirect="/sign-in"
                 path="/my-account"
                 render={props => <PrivateView user={this.state.user} {...props} />}
+              />
+              <ProtectedRoute
+                authorized={this.state.user}
+                redirect="/sign-in"
+                path="/payment-method/list"
+                render={props => <PaymentMethodListView user={this.state.user} {...props} />}
+              />
+              <ProtectedRoute
+                authorized={this.state.user}
+                redirect="/sign-in"
+                path="/payment-method/create"
+                render={props => <PaymentMethodCreateView user={this.state.user} {...props} />}
               />
 
               <Route path="/error" component={ErrorView} />

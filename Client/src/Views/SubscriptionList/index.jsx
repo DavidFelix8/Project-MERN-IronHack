@@ -31,12 +31,11 @@ class SubscriptionListView extends Component {
     // console.log('purchasing subscription ', id);
     try {
       const subscription = await selectSubscription(id);
-      // console.log('Purchased subscription', subscription);
+      console.log('Purchased subscription', subscription);
     } catch (error) {
       console.log(error);
     }
   }
-
 
   render() {
     const subscriptions = this.state.subscriptions;

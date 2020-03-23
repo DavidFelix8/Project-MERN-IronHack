@@ -17,6 +17,8 @@ const subscriptionRouter = require('./routes/subscription');
 const servicesRouter = require('./routes/services');
 const bookingsRouter = require('./routes/booking');
 const faqRouter = require('./routes/faq');
+const paymentMethodRouter = require('./routes/payment-method');
+const purchaseRouter = require('./routes/purchase');
 
 const app = express();
 
@@ -50,6 +52,8 @@ app.use('/api/subscription', subscriptionRouter);
 app.use('/api/service', servicesRouter);
 app.use('/api/booking', bookingsRouter);
 app.use('/api/faq', faqRouter);
+app.use('/api/payment-method', paymentMethodRouter);
+app.use('/api/purchase', purchaseRouter);
 
 // Catch missing routes and forward to error handler
 app.use((req, res, next) => {

@@ -60,6 +60,7 @@ class PrivateView extends Component {
           <div className="MyAccount-Subs">
             <h2 className="MyAccount-Text">Your subscription ends at:</h2>
           </div>
+          <Link to="/payment-method/list">View Payment Methods</Link>
         </section>
         <Link to="/my-account/edit">Edit Profile</Link>
       </div>
