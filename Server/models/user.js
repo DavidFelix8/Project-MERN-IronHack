@@ -24,6 +24,9 @@ const schema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Subscription'
   },
+  stripeCustomerId: {
+    type: String
+  },
   charged: {
     type: Boolean
   }

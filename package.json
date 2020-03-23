@@ -1,0 +1,9 @@
+{
+  "name": "simplify",
+  "version": "1.0.0",
+  "scripts": {
+    "client:build": "cd Client && npm install && npm run build && cd ..",
+    "postinstall": "npm run Client:build && cd Server && npm install && cd ..",
+    "start": "node ./Server/server"
+  }
+}

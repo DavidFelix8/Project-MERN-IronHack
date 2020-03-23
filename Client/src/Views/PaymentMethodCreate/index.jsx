@@ -21,15 +21,17 @@ class PaymentMethodCreateView extends Component {
 
   async handleFormSubmission(event, stripe, elements) {
     event.preventDefault();
+    //console.log(elements.getElement(CardElement));
     const data = await stripe.createPaymentMethod({
       type: 'card',
       card: elements.getElement(CardElement)
     });
+    //console.log(data);
     const { error, paymentMethod } = data;
     if (error) {
       console.log(error);
     } else {
-      // console.log(paymentMethod);
+      console.log(paymentMethod);
       await paymentMethodCreate(paymentMethod.id);
       this.props.history.push('/payment-method/list');
     }
