@@ -19,22 +19,16 @@ class MoreServicesWeOfferView extends Component {
             <ul>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Painter
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Painter</p>{' '}
               </li>
 
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Business Setup
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Business Setup</p>{' '}
               </li>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Packers and Movers
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Packers and Movers</p>{' '}
               </li>
             </ul>
           </article>
@@ -42,21 +36,15 @@ class MoreServicesWeOfferView extends Component {
             <ul>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Car Wash
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Car Wash</p>{' '}
               </li>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Doctor at Home
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Doctor at Home</p>{' '}
               </li>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Gas Stove Repair
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Gas Stove Repair</p>{' '}
               </li>
             </ul>
           </article>
@@ -64,23 +52,16 @@ class MoreServicesWeOfferView extends Component {
             <ul>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Event Planning
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Event Planning</p>{' '}
               </li>
 
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  - Detective Agency
-                </a>{' '}
+                <p className="MoreServicesWeOffer-Text">- Detective Agency</p>{' '}
               </li>
               <li>
                 {' '}
-                <a href="/" className="MoreServicesWeOffer-Text">
-                  {' '}
-                  - Food
-                </a>
+                <p className="MoreServicesWeOffer-Text"> - Food</p>
               </li>
             </ul>
           </article>
@@ -89,7 +70,9 @@ class MoreServicesWeOfferView extends Component {
             <li key={service._id}>{service.name}</li>
           ))} */}
         </div>
-        <a className="MoreServicesWeOffer-ViewAll" href="/services">View all Categories</a>
+        <a className="MoreServicesWeOffer-ViewAll" href="/services">
+          View all Categories
+        </a>
       </section>
     );
   }

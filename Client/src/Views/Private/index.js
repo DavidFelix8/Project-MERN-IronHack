@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import { Container, Row, Col } from 'react-bootstrap';
 import './style.scss';
 
 // import { list } from './../../services/service';
@@ -41,28 +41,48 @@ class PrivateView extends Component {
     //User Undefined
     return (
       <div>
-        <div>
-          {/* {<pre>{JSON.stringify(this.props, null, 2)}</pre>} */}
-          <h1>{user.name}</h1>
-          <span>{user.email}</span>
-        </div>
+        {/* {<pre>{JSON.stringify(this.props, null, 2)}</pre>} */}
+
         <section id="d-flex flex-column">
-          <div className="MyAccount-Subs">
-            <h2 className="MyAccount-Text">Your subscription is:</h2>
-            {this.state.subscription && <h2>{this.state.subscription.title}</h2>}
+          <Container className="MyAccount-Container">
+            <Row className="MyAccount-Subs">
+              <Col className="MyAccount-Text">Account Type:</Col>
+              <Col className="MyAccount-TextShow">
+                {this.state.subscription ? <h4>{this.state.subscription.title}</h4> : 'None'}
+              </Col>
+            </Row>
+            <Row className="MyAccount-Subs">
+              <Col className="MyAccount-Text">Your subscription ends at:</Col>
+              <Col className="MyAccount-TextShow">Next Month</Col>
+            </Row>
+            <Row className="MyAccount-Subs">
+              <Col className="MyAccount-Text">Username</Col>
+              <Col className="MyAccount-TextShow">{user.name}</Col>
+            </Row>
+            <Row className="MyAccount-Subs">
+              <Col className="MyAccount-Text">Email</Col>
+              <Col className="MyAccount-TextShow">{user.email}</Col>
+            </Row>
+            <Row className="MyAccount-Subs">
+              <Col className="MyAccount-Text">Your Subscription Includes:</Col>
+              <Col className="MyAccount-TextShowIncludes">
+                <ol>
+                  {' '}
+                  {this.state.subscription ? (
+                    <li>{this.state.subscription.categories}</li>
+                  ) : (
+                    'You need to purchase a subscription first'
+                  )}
+                </ol>
+              </Col>
+            </Row>
+          </Container>
+          <div className="MyAccount-links">
+            <Link to="/payment-method/list">View Payment Methods</Link>
+            <Link to="/my-account/edit">Edit Profile</Link>
+            <Link to="/booking/list">See my List of Bookings</Link>
           </div>
-          <div className="MyAccount-Subs">
-            <h2 className="MyAccount-Text">Your Subscription Includes:</h2>
-            <ul className="MyAccount-Includes">
-              {this.state.subscription && <li>{this.state.subscription.categories}</li>}
-            </ul>
-          </div>
-          <div className="MyAccount-Subs">
-            <h2 className="MyAccount-Text">Your subscription ends at:</h2>
-          </div>
-          <Link to="/payment-method/list">View Payment Methods</Link>
         </section>
-        <Link to="/my-account/edit">Edit Profile</Link>
       </div>
     );
   }
