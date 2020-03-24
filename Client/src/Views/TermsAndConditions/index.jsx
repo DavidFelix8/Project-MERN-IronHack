@@ -8,12 +8,12 @@ function TermsAndConditions() {
       <div>
         <small className="Terms-smallText">
           Please read these Terms & Conditions carefully before using Simplify application which is
-          operated and managed by Meaud&Felix ltd.Your access to and use of the Service is
-          conditioned on your acceptance of and compliance with these Terms and conditions. These
-          Terms and conditions apply to all visitors, users and others who access, download,
-          register and use Simplify application. By accessing, downloading or using the Simplify
-          application you agree to be bound by these Terms. If you disagree with any part of the
-          terms then you may not access the application.
+          operated and managed by <span className="font-weight-bold">Meaud&Felix</span> ltd.Your
+          access to and use of the Service is conditioned on your acceptance of and compliance with
+          these Terms and conditions. These Terms and conditions apply to all visitors, users and
+          others who access, download, register and use Simplify application. By accessing,
+          downloading or using the Simplify application you agree to be bound by these Terms. If you
+          disagree with any part of the terms then you may not access the application.
         </small>
       </div>
       <div>
