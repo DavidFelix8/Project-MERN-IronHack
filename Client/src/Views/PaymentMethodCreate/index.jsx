@@ -59,7 +59,7 @@ class PaymentMethodCreateView extends Component {
               <form onSubmit={event => this.handleFormSubmission(event, stripe, elements)}>
                 {/* <label htmlFor="name">Name</label> */}
                 <CardElement options={STRIPE_ELEMENT_OPTIONS} />
-                <a href="/my-account">
+                <a className="secondary" href="/my-account">
                   <button>Add Payment Method</button>
                 </a>
               </form>
