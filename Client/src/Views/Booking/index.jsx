@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import { list as listBookings } from '../../services/payment-method';
 
+import './style.scss';
+
 class BookingView extends Component {
   constructor(props) {
     super(props);
@@ -28,10 +30,10 @@ class BookingView extends Component {
   render() {
     const bookings = this.state.bookings;
     return (
-      <div>
+      <div className="Booking">
         {/* {<pre>{JSON.stringify(this.state, null, 2)}</pre>} */}
 
-        <h4>Here is your booking section</h4>
+        <h4 className="Booking-h4">Here is your booking section</h4>
         {bookings.map(booking => (
           // console.log()
           <div>
