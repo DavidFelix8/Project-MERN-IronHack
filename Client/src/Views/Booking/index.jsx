@@ -1,20 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { list as listBooking } from './../../services/booking';
 
 class BookingView extends Component {
-  contructor() {
-    super();
-    this.state = {
-      
-    }
-  }
+  //contructor() {
+  //super();
+  //this.state = {
+
+  // }
+  //}
   render() {
-    return (
-      <div>
-        
-      </div>
-    )
+    return <div></div>;
   }
 }
 
-export default BookingView
+export default BookingView;

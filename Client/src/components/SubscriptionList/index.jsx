@@ -21,15 +21,11 @@ class SubscriptionList extends Component {
       <section>
         {/* <pre>{JSON.stringify(props, null, 2)}</pre> */}
         <div className="d-flex flex-column justify-content-md-around align-items-center mt-4">
-          <h1 className="text-capitalize">{this.props.title}</h1>
           <Card className="SubscriptionList-Card" style={{ width: '18rem', height: '30rem' }}>
-            <Card.Img
-              variant="top"
-              src="https://source.unsplash.com/1000x600/?star"
-              alt="Subscription"
-            />
             <Card.Body className="d-flex flex-column justify-content-between">
-              <Card.Title></Card.Title>
+              <Card.Title className="card-title">
+                <h2>{this.props.title}</h2>
+              </Card.Title>
               <Card.Text>
                 <span className="font-weight-bold">Services Included:</span>
                 <span className="d-block">{`${this.props.categories}`}</span>
@@ -39,7 +35,11 @@ class SubscriptionList extends Component {
                   <span className="font-weight-bold">Price:</span> {formatPrice(this.props.price)}
                 </span>
               </Card.Text>
-              <Button variant="primary" onClick={this.props.handleSubscriptionPurchase}>
+              <Button
+                href="/my-account"
+                variant="primary"
+                onClick={this.props.handleSubscriptionPurchase}
+              >
                 Buy
               </Button>
             </Card.Body>

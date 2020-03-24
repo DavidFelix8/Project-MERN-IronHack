@@ -66,14 +66,14 @@ class PrivateView extends Component {
             <Row className="MyAccount-Subs">
               <Col className="MyAccount-Text">Your Subscription Includes:</Col>
               <Col className="MyAccount-TextShowIncludes">
-                <ol>
-                  {' '}
+                {' '}
+                <ul>
                   {this.state.subscription ? (
                     <li>{this.state.subscription.categories}</li>
                   ) : (
                     'You need to purchase a subscription first'
                   )}
-                </ol>
+                </ul>
               </Col>
             </Row>
           </Container>
