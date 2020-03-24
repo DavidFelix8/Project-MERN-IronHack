@@ -4,9 +4,9 @@ import './style.scss';
 function TermsAndConditions() {
   return (
     <section className="container-terms">
-      <h2>Terms and Conditions</h2>
+      <h2 className="mt-4">Terms and Conditions</h2>
       <div>
-        <small>
+        <small className="Terms-smallText">
           Please read these Terms & Conditions carefully before using Simplify application which is
           operated and managed by Meaud&Felix ltd.Your access to and use of the Service is
           conditioned on your acceptance of and compliance with these Terms and conditions. These

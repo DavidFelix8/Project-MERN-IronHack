@@ -1,17 +1,52 @@
-.MyAccount-Text {
-  font-size: 1rem;
-  text-decoration: underline;
-}
-
-.MyAccount-Subs {
-  width: 80%;
-  height: inherit;
-  margin: 2rem auto;
-  border: 2px dotted yellow;
-  border-radius: 0.5rem;
-}
-.MyAccount-Includes {
+.MyAccount-Container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  min-height: 35rem;
+  justify-content: space-between;
+}
+
+.MyAccount-Text {
+  text-align: left;
+  font-weight: bold;
+  @media (min-width: 700px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 2rem;
+  }
+}
+
+.MyAccount-TextShow {
+  text-align: left;
+  @media (min-width: 700px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.7rem;
+  }
+}
+
+.MyAccount-TextShowIncludes {
+  text-align: left;
+  @media (min-width: 700px) {
+    font-size: 1.2rem;
+  }
+  @media (min-width: 900px) {
+    font-size: 1.7rem;
+  }
+}
+
+.MyAccount-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  justify-content: space-between;
+}
+.MyAccount-links a {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(190, 187, 187, 0.185);
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { editUserInformation } from '../../services/authentication';
-
 import './style.scss';
 
 class PrivateEditView extends Component {
@@ -62,8 +61,6 @@ class PrivateEditView extends Component {
     const user = this.props.user;
     return (
       <section className="PrivateEdit-SectionMaster">
-        <p className="mt-4">Type of subscription {user.subscription}</p>
-
         <form className="PrivateEdit-Form" onSubmit={this.handleFormSubmission}>
           <label className="PrivateEdit-Label" htmlFor="name">
             Name:
