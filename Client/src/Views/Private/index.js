@@ -44,7 +44,6 @@ class PrivateView extends Component {
     return (
       <div>
         {/* {<pre>{JSON.stringify(this.props, null, 2)}</pre>} */}
-
         <section id="d-flex flex-column">
           <Container className="MyAccount-Container">
             <Row className="MyAccount-Subs">
@@ -57,7 +56,13 @@ class PrivateView extends Component {
               <Col className="MyAccount-Text">Your subscription ends at:</Col>
               <Col className="MyAccount-TextShow">
                 <div>
-                  {this.state.subscription ? <Moment add={{ days: 30 }}>{date}</Moment> : 'None'}
+                  {this.state.subscription ? (
+                    <Moment format="DD/MM/YYYY" add={{ days: 30, hours: 0 }}>
+                      {date}
+                    </Moment>
+                  ) : (
+                    'None'
+                  )}
                 </div>
               </Col>
             </Row>
