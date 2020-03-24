@@ -34,7 +34,7 @@ class PackageSingleView extends Component {
     return (
       <div className="card-container">
         {service && (
-          <Card style={{ width: '20rem' }}>
+          <Card style={{ width: '20rem', height: '70vh' }}>
             <Card.Img variant="top" src={service.image} />
             <Card.Body>
               <Card.Title>{service.name}</Card.Title>
