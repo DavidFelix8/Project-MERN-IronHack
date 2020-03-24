@@ -10,10 +10,23 @@ const list = async () => {
   return bookings;
 };
 
+const find = async id => {
+  // console.log('at the select service', id);
+  const result = await instance.get(`/booking/find/${id}`);
+  // console.log('retrived from service', result.data);
+  return result.data;
+};
+
 const create = async (serviceId, date) => {
   const result = await instance.post(`/service/${serviceId}/book`, { date });
   const booking = result.data.booking;
   return booking;
 };
 
-export { create };
+const load = async id => {
+  const result = await instance.get(`/${id}`);
+  const booking = result.data.booking;
+  return booking;
+};
+
+export { list, load, find, create };
