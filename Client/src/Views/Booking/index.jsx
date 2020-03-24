@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import { list as listBookings } from '../../services/payment-method';
@@ -50,4 +51,5 @@ class BookingView extends Component {
     );
   }
 }
+
 export default BookingView;
