@@ -28,7 +28,7 @@ class SubscriptionList extends Component {
               </Card.Title>
               <Card.Text>
                 <span className="font-weight-bold">Services Included:</span>
-                <span className="d-block">{`${this.props.categories}`}</span>
+                <span className="d-block">{`${this.props.categories},`}</span>
               </Card.Text>
               <Card.Text>
                 <span>
