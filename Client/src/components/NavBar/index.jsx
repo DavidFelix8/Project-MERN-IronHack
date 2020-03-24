@@ -22,6 +22,7 @@ const NavBar = props => {
         <Navbar.Collapse id="responsive-navbar-nav">
           {(props.user && (
             <Nav className="mr-auto">
+              <Nav.Link href="/subscriptions">Subscriptions</Nav.Link>
               <Nav.Link href="/services">Services</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
               <Nav.Link href="/my-account">{props.user.name}'s Account</Nav.Link>
@@ -31,6 +32,7 @@ const NavBar = props => {
             </Nav>
           )) || (
             <Nav>
+              <Nav.Link href="/subscriptions">Subscriptions</Nav.Link>
               <Nav.Link href="/services">Services</Nav.Link>
               <Nav.Link href="/contact" className="Navbar-Contact">
                 Contact

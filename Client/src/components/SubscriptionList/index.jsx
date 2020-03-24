@@ -37,11 +37,18 @@ class SubscriptionList extends Component {
               </Card.Text>
               <Button
                 href="/my-account"
-                variant="primary"
+                variant="secondary"
                 onClick={this.props.handleSubscriptionPurchase}
               >
-                Buy
+                Subscribe
               </Button>
+              <small>
+                *More info in{' '}
+                <a className="underline" href="/termsandconditions">
+                  Terms And Conditions
+                </a>
+                .
+              </small>
             </Card.Body>
           </Card>
         </div>

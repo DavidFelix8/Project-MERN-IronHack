@@ -9,7 +9,7 @@ export class CancelSubscriptionView extends Component {
       <Form className="container-cancel">
         <Form.Group controlId="formGroupEmail">
           <Form.Label>Why did you decided to cancel your Subscription?</Form.Label>
-          <Form.Control type="text" placeholder="Do you really want to cancel? Tell us about" />
+          <Form.Control type="text" placeholder="Do you really want to cancel?" />
         </Form.Group>
         <Form.Group controlId="formGroupPassword">
           <Form.Label>What can we do to improve?</Form.Label>

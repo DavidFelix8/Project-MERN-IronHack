@@ -56,11 +56,11 @@ class PrivateView extends Component {
               <Col className="MyAccount-TextShow">Next Month</Col>
             </Row>
             <Row className="MyAccount-Subs">
-              <Col className="MyAccount-Text">Username</Col>
+              <Col className="MyAccount-Text">Username:</Col>
               <Col className="MyAccount-TextShow">{user.name}</Col>
             </Row>
             <Row className="MyAccount-Subs">
-              <Col className="MyAccount-Text">Email</Col>
+              <Col className="MyAccount-Text">Email:</Col>
               <Col className="MyAccount-TextShow">{user.email}</Col>
             </Row>
             <Row className="MyAccount-Subs">

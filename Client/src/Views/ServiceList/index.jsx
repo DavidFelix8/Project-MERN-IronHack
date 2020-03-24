@@ -64,6 +64,13 @@ class ServiceListView extends Component {
               </ListGroup>
             </li>
           ))}
+          <small>
+            *More info in{' '}
+            <a className="underline" href="/termsandconditions">
+              Terms And Conditions
+            </a>
+            .
+          </small>
         </ul>
       </div>
     );

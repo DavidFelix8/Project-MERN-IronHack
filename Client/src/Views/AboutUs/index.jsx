@@ -6,7 +6,7 @@ function AboutUs() {
     <section className="About_Us-Wave">
       <div className="AboutUs-div-top d-flex flex-column">
         <h1 className="About_Us-Title">Simplify. in Lisbon</h1>
-        <h5 className="About_Us-Text-First">
+        <h5 className="About_Us-Text">
           Simplify helps the residents of Lisbon focus on their priorities, and take time off from
           managing household chores such as, getting home appliances repaired, getting the AC
           serviced, fixing electrical issues, cleaning their house and ironing clothes. Our verified
