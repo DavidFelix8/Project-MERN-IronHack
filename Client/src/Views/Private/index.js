@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import './style.scss';
+import Moment from 'react-moment';
 
 // import { list } from './../../services/service';
 import { find } from './../../services/subscription';
@@ -34,6 +35,7 @@ class PrivateView extends Component {
   }
 
   render() {
+    const date = new Date();
     const user = this.props.user;
     const service = this.props.service;
     // console.log('subscrition state', this.state.subscription);
@@ -53,7 +55,11 @@ class PrivateView extends Component {
             </Row>
             <Row className="MyAccount-Subs">
               <Col className="MyAccount-Text">Your subscription ends at:</Col>
-              <Col className="MyAccount-TextShow">Next Month</Col>
+              <Col className="MyAccount-TextShow">
+                <div>
+                  {this.state.subscription ? <Moment add={{ days: 30 }}>{date}</Moment> : 'None'}
+                </div>
+              </Col>
             </Row>
             <Row className="MyAccount-Subs">
               <Col className="MyAccount-Text">Username</Col>
